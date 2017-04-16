@@ -72,7 +72,8 @@ Hook::addRoute(function ($routes) {
 而在控制器中，则可以像下面这样提取参数。别忘了给可选参数加个默认值。
 
 ```php
-public function doSomething($skin_id, $cape_id = null) {
+public function doSomething($skin_id, $cape_id = null)
+{
     //
 }
 ```
