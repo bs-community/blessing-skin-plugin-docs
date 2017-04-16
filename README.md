@@ -12,3 +12,4 @@
 - [插件信息定义](information.md)
 - [插件的开始](bootstrap.md)
 - [路由](route.md)
+- [视图](view.md)
