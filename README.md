@@ -8,7 +8,7 @@
 
 目录：
 
-- 插件目录结构
-- 插件信息定义
-- 插件的开始
-- 路由
+- [插件目录结构](structure.md)
+- [插件信息定义](information.md)
+- [插件的开始](bootstrap.md)
+- [路由](route.md)
