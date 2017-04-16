@@ -13,3 +13,4 @@
 - [插件的开始](bootstrap.md)
 - [路由](route.md)
 - [视图](view.md)
+- [多语言](i18n.md)
