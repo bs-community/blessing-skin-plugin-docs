@@ -6,12 +6,12 @@
 
 ## 返回闭包
 
-`bootstrap.php` 其实是一个返回一个闭包的 PHP 文件，您可以理解为它返回一个匿名函数，所有的代码都要写在这个匿名函数中。此外，您可以在这个闭包（即这个匿名函数）的参数列表中使用类型提示，Laravel 会自动从容器中解析出对应的依赖并自动注入。（在使用依赖注入之前，建议您先了解 [Laravel 的服务容器机制](https://laravel-china.org/docs/5.1/container)）
+`bootstrap.php` 其实是一个返回一个闭包的 PHP 文件，您可以理解为它返回一个匿名函数，所有的代码都要写在这个匿名函数中。此外，您可以在这个闭包（即这个匿名函数）的参数列表中使用类型提示，Laravel 会自动从容器中解析出对应的依赖并自动注入。（在使用依赖注入之前，建议您先了解 [Laravel 的服务容器](https://laravel-china.org/docs/5.1/container)）
 
 常用的依赖有：
 
-- `Illuminate\Contracts\Events\Dispatcher`，事件监听需要此依赖。详情请阅读 “事件” 一节。
-- `Illuminate\Http\Request` 可用于处理用户的请求，如请求的 HTTP 动词判断、获取请求的路径、获取请求体中包含的数据、获取 Cookies 等，详细请阅读 “请求” 一节。
+- `Illuminate\Contracts\Events\Dispatcher` 事件监听需要此依赖。详情请阅读 [事件](event.md) 一节。
+- `Illuminate\Http\Request` 可用于处理用户的请求，如请求的 HTTP 动词判断、获取请求的路径、获取请求体中包含的数据、获取 Cookies 等，详细请阅读 [请求](request.md) 一节。
 
 ## 钩子
 
@@ -39,7 +39,7 @@ Hook::addMenuItem('user', 0, [
 
 - `title`
 
-`title` 是菜单项的显示名，它会经过翻译器翻译（即调用语言文件），并且您还要指明语言文件所在插件的命名空间，例子中就表示从 `Blessing\ExamplePlugin` 这个命名空间中寻找语言文件，接着从该命名空间中寻找相应的翻译值，有关多语言请阅读 “多语言” 一节。
+`title` 是菜单项的显示名，它会经过翻译器翻译（即调用语言文件），并且您还要指明语言文件所在插件的命名空间，例子中就表示从 `Blessing\ExamplePlugin` 这个命名空间中寻找语言文件，接着从该命名空间中寻找相应的翻译值，有关多语言请阅读 [多语言](i18n.md) 一节。
 
 另外，如果您没有使用多语言功能，那么它将 `title` 的值本身。
 
@@ -53,7 +53,7 @@ Hook::addMenuItem('user', 0, [
 
 #### 添加路由
 
-请阅读 “路由” 一节。
+请阅读 [路由](route.md) 一节。
 
 #### 向页面添加样式文件
 
@@ -73,14 +73,14 @@ Hook::addStyleFileToPage(plugin('example-plugin')->assets('assets/css/example.cs
 同样，您可能想向页面添加自定义的 JavaScript 文件，则可以通过 `addScriptFileToPage` 来添加，如：
 
 ```php
-Hook::addStyleFileToPage(plugin('example-plugin')->assets('assets/css/example.css', [*], 999));
+Hook::addScriptFileToPage(plugin('example-plugin')->assets('assets/css/example.js', [*], 999));
 ```
 
-这里要说明的是，通过 `plugin` 的 `assets` 方法同样可以获取到静态资源，后面接两个可选参数。第一个参数是选择需要加载此文件的 URI，这里使用通配符 `*` 表示对任何请求均加载；第二个参数是优先级，越高越先加载。
+这里要说明的是，通过 `plugin` 的 `assets` 方法同样可以获取到静态资源，后面接两个可选参数。第一个可选参数表示仅当请求的 URI 与参数匹配时才加载该资源文件，可以使用通配符；第二个可选参数是优先级，越高越先加载。
 
 #### 注册 JavaScript 的语言文件
 
-注册 JavaScript 的语言文件相当简单，您只需插件的 `name` 值传给 `registerPluginTransScripts` 方法，如：
+注册 JavaScript 的语言文件相当简单，您只需将插件的 `name` 值作为参数传递给 `registerPluginTransScripts` 方法，如：
 
 ```php
 Hook::registerPluginTransScripts('example-plugin');
