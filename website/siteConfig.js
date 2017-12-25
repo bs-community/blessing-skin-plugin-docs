@@ -2,7 +2,7 @@ const siteConfig = {
   title: 'Blessing Skin 插件开发文档',
   // tagline: '',
   // url: 'https://facebook.github.io',
-  baseUrl: '/',
+  baseUrl: '/blessing-skin-plugin-docs/',
   organizationName: 'g-plane',
   projectName: 'blessing-skin-plugin-docs',
   headerLinks: [
