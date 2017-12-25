@@ -3,6 +3,7 @@ const siteConfig = {
   // tagline: '',
   // url: 'https://facebook.github.io',
   baseUrl: '/',
+  organizationName: 'g-plane',
   projectName: 'blessing-skin-plugin-docs',
   headerLinks: [
     { doc: 'structure', label: '文档' }
