@@ -1,4 +1,7 @@
-# 视图
+---
+id: view
+title: 视图
+---
 
 视图其实就是 HTML，它使用的是 Laravel 的 Blade 模板引擎。
 

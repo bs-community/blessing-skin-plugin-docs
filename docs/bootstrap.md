@@ -1,4 +1,7 @@
-# 插件的开始
+---
+id: bootstrap
+title: 插件的开始
+---
 
 `bootstrap.php` 是整个插件的入口文件，插件在运行的时候，`bootstrap.php` 中的代码会首先被执行。
 
