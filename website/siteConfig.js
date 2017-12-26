@@ -25,6 +25,10 @@ const siteConfig = {
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/g-plane/blessing-skin-plugin-docs',
+  algolia: {
+    apiKey: '555fd4550945ea82c7c7576c52294339',
+    indexName: 'blessing-skin'
+  },
 };
 
 module.exports = siteConfig;
