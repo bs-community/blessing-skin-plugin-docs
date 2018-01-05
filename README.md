@@ -6,4 +6,4 @@
 
 **友情提醒：由于 Blessing Skin Server 基于 Laravel 5.2 开发，因此在阅读本文档之前，您应该拥有一定的 PHP 基础，如果拥有一定的 Laravel 基础则更佳。**
 
-在线阅读：[http://g-plane.github.io/blessing-skin-plugin-docs/](http://g-plane.github.io/blessing-skin-plugin-docs/)
+在线阅读：[https://g-plane.github.io/blessing-skin-plugin-docs/](https://g-plane.github.io/blessing-skin-plugin-docs/)
