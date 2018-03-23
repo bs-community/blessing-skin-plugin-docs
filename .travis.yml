@@ -4,8 +4,6 @@ node_js: 9
 script:
   - cd website
   - yarn
-  - git config --global user.email "gplane-fans@users.noreply.github.com"
-  - git config --global user.name "GPlane Fans"
   - yarn build
 
 deploy:
