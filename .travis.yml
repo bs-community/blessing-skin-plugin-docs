@@ -6,5 +6,15 @@ script:
   - yarn
   - git config --global user.email "gplane-fans@users.noreply.github.com"
   - git config --global user.name "GPlane Fans"
-  - echo "machine github.com login \"GPlane Fans\" password $GITHUB_TOKEN" > ~/.netrc
-  - GIT_USER="GPlane Fans" CURRENT_BRANCH=gh-pages yarn run publish-gh-pages
+  - yarn build
+
+deploy:
+  skip_cleanup: true
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: website/build/blessing-skin-plugin-docs
+  email: gplane@protonmail.com
+  name: GPlane Fans
