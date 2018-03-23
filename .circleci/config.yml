@@ -11,7 +11,7 @@ jobs:
           command: |
             git config --global user.email "GPlane Fans@users.noreply.github.com"
             git config --global user.name "GPlane Fans"
-            echo "machine github.com login GPlane Fans password $GITHUB_TOKEN" > ~/.netrc
+            echo "machine github.com login \"GPlane Fans\" password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER="GPlane Fans" yarn run publish-gh-pages
 
 workflows:
