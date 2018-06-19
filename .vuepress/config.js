@@ -29,5 +29,6 @@ module.exports = {
     docsBranch: 'master',
     editLinks: true,
     editLinkText: '帮助我们完善这个页面',
+    evergreen: true,
   }
 }
