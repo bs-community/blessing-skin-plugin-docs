@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 开始学习开发插件
-actionLink: /guide/bootstrap
+actionLink: /guide/structure
 footer: Copyright © 2017-present The Blessing Skin Community
 ---
 
