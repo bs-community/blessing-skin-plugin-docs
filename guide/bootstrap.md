@@ -1,5 +1,4 @@
 ---
-id: bootstrap
 title: 插件的开始
 ---
 
@@ -13,8 +12,8 @@ title: 插件的开始
 
 常用的依赖有：
 
-- `Illuminate\Contracts\Events\Dispatcher` 事件监听需要此依赖。详情请阅读 [事件](event.md) 一节。
-- `Illuminate\Http\Request` 可用于处理用户的请求，如请求的 HTTP 动词判断、获取请求的路径、获取请求体中包含的数据、获取 Cookies 等，详细请阅读 [请求](request.md) 一节。
+- `Illuminate\Contracts\Events\Dispatcher` 事件监听需要此依赖。详情请阅读 [事件](./event.md) 一节。
+- `Illuminate\Http\Request` 可用于处理用户的请求，如请求的 HTTP 动词判断、获取请求的路径、获取请求体中包含的数据、获取 Cookies 等，详细请阅读 [请求](./request.md) 一节。
 
 ## 钩子
 
@@ -42,7 +41,7 @@ Hook::addMenuItem('user', 0, [
 
 - `title`
 
-`title` 是菜单项的显示名，它会经过翻译器翻译（即调用语言文件），并且您还要指明语言文件所在插件的命名空间，例子中就表示从 `Blessing\ExamplePlugin` 这个命名空间中寻找语言文件，接着从该命名空间中寻找相应的翻译值，有关多语言请阅读 [多语言](i18n.md) 一节。
+`title` 是菜单项的显示名，它会经过翻译器翻译（即调用语言文件），并且您还要指明语言文件所在插件的命名空间，例子中就表示从 `Blessing\ExamplePlugin` 这个命名空间中寻找语言文件，接着从该命名空间中寻找相应的翻译值，有关多语言请阅读 [多语言](./i18n.md) 一节。
 
 另外，如果您没有使用多语言功能，那么它将 `title` 的值本身。
 
@@ -56,7 +55,7 @@ Hook::addMenuItem('user', 0, [
 
 #### 添加路由
 
-请阅读 [路由](route.md) 一节。
+请阅读 [路由](./route.md) 一节。
 
 #### 向页面添加样式文件
 

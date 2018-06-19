@@ -1,5 +1,4 @@
 ---
-id: information
 title: 插件信息定义
 ---
 

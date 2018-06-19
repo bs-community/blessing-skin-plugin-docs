@@ -1,13 +1,12 @@
 ---
-id: view
 title: 视图
 ---
 
 视图其实就是 HTML，它使用的是 Laravel 的 Blade 模板引擎。
 
-关于视图更详细的用法，请参考 Laravel 5.1 文档中 [视图](http://d.laravel-china.org/docs/5.1/views) 一节。
+关于视图更详细的用法，请参考 Laravel 5.2 文档中 [视图](http://d.laravel-china.org/docs/5.2/views) 一节。
 
-关于 Blade 模板更详细的用法，请参考 Laravel 5.1 文档中 [Blade 模板](http://d.laravel-china.org/docs/5.1/blade) 一节。
+关于 Blade 模板更详细的用法，请参考 Laravel 5.2 文档中 [Blade 模板](http://d.laravel-china.org/docs/5.2/blade) 一节。
 
 ## 添加视图文件
 
@@ -89,7 +88,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 ### 控制结构
 
-> 这一部分内容摘自 Laravel 5.1 文档，原文请看[这里](http://d.laravel-china.org/docs/5.1/blade#control-structures)
+> 这一部分内容摘自 Laravel 5.2 文档，原文请看[这里](http://d.laravel-china.org/docs/5.2/blade#control-structures)
 
 #### If 表达式
 

@@ -1,7 +1,0 @@
-{
-  "docs": {
-    "开始": ["structure", "information", "bootstrap"],
-    "基础": ["view", "route"],
-    "进阶": ["i18n"]
-  }
-}

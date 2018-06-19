@@ -1,0 +1,11 @@
+{
+  "license": "CC-BY-SA-4.0",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "devDependencies": {
+    "vuepress": "^0.10.1"
+  }
+}

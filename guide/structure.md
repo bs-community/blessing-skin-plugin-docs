@@ -1,5 +1,4 @@
 ---
-id: structure
 title: 插件目录结构
 ---
 

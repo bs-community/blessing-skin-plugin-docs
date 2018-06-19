@@ -1,5 +1,4 @@
 ---
-id: route
 title: 路由
 ---
 
@@ -17,7 +16,7 @@ return function () {
 };
 ```
 
-关于路由更详细的用法，请参考 Laravel 5.1 文档中 [HTTP 路由](http://d.laravel-china.org/docs/5.1/routing) 一节。
+关于路由更详细的用法，请参考 Laravel 5.1 文档中 [HTTP 路由](http://d.laravel-china.org/docs/5.2/routing) 一节。
 
 ## 最简单的路由
 
@@ -117,7 +116,7 @@ Hook::addRoute(function ($routes) {
 
 从严格的角度来看，中间件与路由是两个概念，但考虑到插件的开发几乎不需要自己定义中间件，因此把 “中间件” 放在这里简单介绍。
 
-如果您对 “中间件” 感兴趣，您可以阅读 Laravel 5.1 的文档 [HTTP 中间件](http://d.laravel-china.org/docs/5.1/middleware) 一节。
+如果您对 “中间件” 感兴趣，您可以阅读 Laravel 5.1 的文档 [HTTP 中间件](http://d.laravel-china.org/docs/5.2/middleware) 一节。
 
 在这里，中间件可以对用户的请求进行过滤。如，当一个未登录的访客试图访问用户中心时，`auth` 中间件将检查访客是否已登录，如果已登录，则允许继续访问用户中心，否则跳转到登录界面。
 
