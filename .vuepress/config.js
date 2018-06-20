@@ -15,6 +15,7 @@ module.exports = {
     ],
     sidebar: {
       '/guide/': [
+        'scaffold',
         'structure',
         'information',
         'bootstrap',
