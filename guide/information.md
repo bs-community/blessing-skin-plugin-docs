@@ -1,5 +1,6 @@
 ---
 title: 插件信息定义
+
 ---
 
 ## 前言
@@ -8,14 +9,15 @@ title: 插件信息定义
 
 ## 字段总览
 
-- `name`
-- `version`
-- `title`
-- `description`
-- `author`
-- `namespace`
-- `config`
-- `url`
+- [`name`](#name)
+- [`version`](#version)
+- [`title`](#title)
+- [`description`](#description)
+- [`author`](#author)
+- [`namespace`](#namespace)
+- [`config`](#config)
+- [`url`](#url)
+- [`require`](#require)
 
 ## 详细介绍
 
@@ -58,3 +60,7 @@ Blessing Skin Server 并没有对此字段作出内容限定，但我们建议�
 ### `url`
 
 这个表示插件的 URL，可以是简介页，也可以是开源仓库的地址。这个字段的值不影响插件运行，也可以省略不写。
+
+### `require`
+
+这个字段用于声明插件的依赖，更多介绍请移步 [声明依赖](dependency.md)

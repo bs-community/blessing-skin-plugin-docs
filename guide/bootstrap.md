@@ -60,6 +60,7 @@ Hook::addMenuItem('user', 0, [
 #### 向页面添加样式文件
 
 有时您可能想向页面添加自定义的 CSS 文件，则可以通过 `addStyleFileToPage` 来添加，如：
+
 ```php
 Hook::addStyleFileToPage(plugin_assets('example-plugin', 'assets/css/example.css'));
 ```
