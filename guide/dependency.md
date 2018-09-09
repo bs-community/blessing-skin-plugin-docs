@@ -2,6 +2,8 @@
 title: 声明插件依赖
 ---
 
+# {{ $page.title }} 
+
 ::: warning
 
 此特性需要 Blessing Skin v3.5.0 或更高版本

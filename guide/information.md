@@ -3,6 +3,8 @@ title: 插件信息定义
 
 ---
 
+# {{ $page.title }}
+
 ## 前言
 
 由于此文件是 JSON 格式文件，所以您必须按照 JSON 的规范来写。错误的 `package.json` 将导致**插件无法运行**和**皮肤站的插件列表无法加载**。在编写完此文件之后，您可以前往 [BeJSON](http://www.bejson.com/) 进行 JSON 校验。

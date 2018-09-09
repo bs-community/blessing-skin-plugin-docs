@@ -2,6 +2,8 @@
 title: 插件目录结构
 ---
 
+# {{ $page.title }}
+
 ## 总览
 
 - [目录] assets
