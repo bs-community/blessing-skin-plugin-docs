@@ -5,7 +5,14 @@
     "dev": "vuepress dev",
     "build": "vuepress build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node scripts/eof.js"
+    }
+  },
   "devDependencies": {
+    "fs-extra": "^7.0.0",
+    "husky": "^1.0.0-rc.13",
     "vuepress": "^0.10.1"
   }
 }
