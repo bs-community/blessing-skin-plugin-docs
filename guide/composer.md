@@ -18,7 +18,7 @@ Composer 会把依赖下载并解压在工程目录的 `vendor` 目录下，而 
 
 在您的插件目录下，执行 `composer` 来安装依赖，例如：
 
-```shell
+```sh
 $ composer require vendor/package
 ```
 

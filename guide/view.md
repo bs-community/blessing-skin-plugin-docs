@@ -53,7 +53,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 您可以在 Blade 模板中使用 HTML，并且以前那样使用 PHP 语句：
 
-```blade
+```html
 <html>
     <head></head>
     <body>
@@ -71,7 +71,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 您只需在双大括号（花括号）内使用这些数据，如：
 
-```blade
+```html
 <h1>{{ $name }} - <small>{{ $phone }}</small></h1>
 ```
 
@@ -82,7 +82,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 双大括号（花括号）内所有的数据都会被转义，如果您要显示原始的未被转义的数据，您可以这样做：
 
-```blade
+```html
 <h1>{!! $name !!} - <small>{!! $phone !!}</small></h1>
 ```
 
@@ -96,7 +96,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 你可以通过 `@if`, `@elseif`, `@else` 及 `@endif` 指令构建 `if` 表达式。这些命令的功能等同于在 PHP 中的语法：
 
-```blade
+```html
 @if (count($records) === 1)
     我有一条记录！
 @elseif (count($records) > 1)
@@ -108,7 +108,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 为了方便，Blade 也提供了一个 `@unless` 命令：
 
-```blade
+```html
 @unless (Auth::check())
     你尚未登录。
 @endunless
@@ -118,7 +118,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 除了条件表达式外，Blade 也支持 PHP 的循环结构：
 
-```blade
+```html
 @for ($i = 0; $i < 10; $i++)
     目前的值为 {{ $i }}
 @endfor
@@ -150,7 +150,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 你也可以传递第四个参数至 `@each` 命令。此参数为当指定的数组为空时，将会被渲染的视图。
 
-```blade
+```html
 @each('view.name', $jobs, 'job', 'view.empty')
 ```
 
@@ -158,7 +158,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 
 Blade 也允许在页面中定义注释，然而，跟 HTML 的注释不同的是，Blade 注释不会被包含在应用程序返回的 HTML 内：
 
-```blade
+```html
 {{-- 此注释将不会出现在渲染后的 HTML --}}
 ```
 
@@ -168,7 +168,7 @@ Blade 也允许在页面中定义注释，然而，跟 HTML 的注释不同的�
 
 对于一个插件而言，如果希望使用皮肤站现有的风格，您的视图文件应该是这样的：
 
-```blade
+```html
 @extends(/* 要继承的母页面 */)
 
 @section('title', /* 页面标题 */)
