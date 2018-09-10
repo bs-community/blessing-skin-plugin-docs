@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build"
+    "build": "vuepress build",
+    "test": "markdownlint guide"
   },
   "husky": {
     "hooks": {
@@ -13,6 +14,7 @@
   "devDependencies": {
     "fs-extra": "^7.0.0",
     "husky": "^1.0.0-rc.13",
+    "markdownlint-cli": "^0.13.0",
     "vuepress": "^0.10.1"
   }
 }
