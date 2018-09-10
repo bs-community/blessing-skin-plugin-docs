@@ -22,8 +22,9 @@ module.exports = {
         'view',
         'route',
         'i18n',
+        'backend-event',
         'dependency',
-        'composer'
+        'composer',
       ]
     },
     repo: 'bs-community/blessing-skin-plugin-docs',

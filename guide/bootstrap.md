@@ -14,7 +14,7 @@ title: 插件的开始
 
 常用的依赖有：
 
-- `Illuminate\Contracts\Events\Dispatcher` 事件监听需要此依赖。详情请阅读 [事件](./event.md) 一节。
+- `Illuminate\Contracts\Events\Dispatcher` 事件监听需要此依赖。详情请阅读 [事件](./backend-event.md) 一节。
 - `Illuminate\Http\Request` 可用于处理用户的请求，如请求的 HTTP 动词判断、获取请求的路径、获取请求体中包含的数据、获取 Cookies 等，详细请阅读 [请求](./request.md) 一节。
 
 ## 钩子
