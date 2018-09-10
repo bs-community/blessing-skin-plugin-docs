@@ -25,13 +25,13 @@ title: 快速创建插件
 之后，如果您使用 Yarn，那么请在终端中运行：
 
 ```bash
-$ yarn global add yo generator-bs-plugin
+yarn global add yo generator-bs-plugin
 ```
 
  如果没有 Yarn，则运行：
 
 ```bash
-$ npm i -g yo generator-bs-plugin
+npm i -g yo generator-bs-plugin
 ```
 
 ## 使用
@@ -41,7 +41,7 @@ $ npm i -g yo generator-bs-plugin
 执行：
 
 ```bash
-$ yo bs-plugin
+yo bs-plugin
 ```
 
 接下来根据您的需要回答问题即可。
@@ -61,24 +61,24 @@ $ yo bs-plugin
 执行：
 
 ```bash
-$ yo bs-plugin:controller <控制器名称>
+yo bs-plugin:controller <控制器名称>
 ```
 
 例如执行 `yo bs-plugin:controller NewController`，就会向 `src` 目录中添加 `NewController.php`。
 
-**注意必须保证是向已有的插件添加控制器，因为要获取命名空间。**
+注意必须保证是向已有的插件添加控制器，因为要获取命名空间。
 
 ### 向已有插件添加路由
 
 执行：
 
 ```bash
-$ yo bs-plugin:route
+yo bs-plugin:route
 ```
 
 接下来根据您的需要回答问题即可。
 
-**注意**
+**注意**：
 
 - 只能向现有的插件添加新的路由
 - `src/routes.php` 必须存在且大致符合以下格式
@@ -96,16 +96,16 @@ Hook::addRoute(function ($router) {
 执行：
 
 ```bash
-$ yo bs-plugin:menu
+yo bs-plugin:menu
 ```
 
 接下来根据您的需要回答问题即可。
 
-**注意只能向现有的插件添加新的菜单项。**
+注意只能向现有的插件添加新的菜单项。
 
 ## 高级
 
-*普通开发者可以跳过此部分。*
+（普通开发者可以跳过此部分。）
 
 ### `package.json` 中定义的依赖
 

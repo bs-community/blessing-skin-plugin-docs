@@ -19,7 +19,7 @@ Composer 会把依赖下载并解压在工程目录的 `vendor` 目录下，而 
 在您的插件目录下，执行 `composer` 来安装依赖，例如：
 
 ```sh
-$ composer require vendor/package
+composer require vendor/package
 ```
 
 尽管 Composer 将会生成 `composer.json` 和 `composer.lock` 文件，但 Blessing Skin 不会用到这些文件，也不影响 Blessing Skin 的工作。

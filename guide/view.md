@@ -14,11 +14,7 @@ title: 视图
 
 ## 添加视图文件
 
-所有的视图文件都放在插件目录下的 `views` 目录下，视图文件的后缀名可以是 `.blade.php` 或 `.tpl`。
-
-如果同名的视图文件使用不同的后缀名时，优先加载 `.tpl` 的。例如，同一目录下同时存在 `index.blade.php` 和 `index.tpl` 两个视图文件，那么只会加载 `index.tpl`。
-
-> 如果您对为什么能使用 `.tpl` 作后缀感兴趣，请移步 [这里](https://blessing.studio/add-extensions-for-blade-in-laravel/)
+所有的视图文件都放在插件目录下的 `views` 目录下，视图文件的后缀名是 `.blade.php`。
 
 ## 使用视图
 
@@ -67,6 +63,12 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 </html>
 ```
 
+::: tip
+
+从 Blessing Skin v4 开始，您可以 `@php` 和 `@endphp` 指令替代 `<?php` 和 `?>` 标记。
+
+:::
+
 ### 显示数据
 
 在上一部分，我们讲述了怎样将数据传递到视图，现在我们就试着在 Blade 模板中加载这些数据。
@@ -78,6 +80,7 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 ```
 
 它会被渲染成：
+
 ```html
 <h1>Secret - <small>2333</small></h1>
 ```
@@ -88,7 +91,11 @@ return view('Author\MyPlugin::hello.world', ['name' => 'Secret', 'phone' => 2333
 <h1>{!! $name !!} - <small>{!! $phone !!}</small></h1>
 ```
 
-**请只对可靠内容才显示其未转义的原始数据，以防止 XSS 攻击**
+::: warning
+
+请只对可靠内容才显示其未转义的原始数据，以防止 XSS 攻击
+
+:::
 
 ### 控制结构
 

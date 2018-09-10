@@ -63,7 +63,7 @@ Hook::addRoute(function ($routes) {
 
 在路由的注册中，通常像 `'FoobarController@doSomething'` 这样来指定控制器。其中，`FoobarController` 是控制器对应的类名，`doSomething` 是 `FoobarController` 中的公有方法名。
 
-**由于插件代码总是有不同于皮肤站程序的命名空间，因此您必须指定该类的命名空间，除非您使用路由组。（关于路由组后文会有介绍）**
+**由于插件代码总是有不同于皮肤站程序的命名空间，因此您必须指定该类的命名空间，除非您使用路由组。**（关于路由组后文会有介绍）
 
 ## 从路由中获取参数
 

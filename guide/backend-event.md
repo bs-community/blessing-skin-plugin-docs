@@ -53,12 +53,12 @@ class RenderSubscriber
   {
     //
   }
-  
+
   public function onRenderingFooter($event)
   {
     //
   }
-  
+
   public function subscribe($events)
   {
     // 假设我们的插件的命名空间是 `Example`
@@ -67,7 +67,7 @@ class RenderSubscriber
       'App\Events\RenderingHeader',
       'Example\RenderSubscriber@onRenderingHeader'
     );
-    
+
     $events->listen(
       'App\Events\RenderingFooter',
       'Example\RenderSubscriber@onRenderingFooter'
@@ -292,7 +292,7 @@ $events->subscribe(Example\RenderSubscriber::class);
 
 含义：即将被添加的角色的名称
 
-###  PlayerWillBeDeleted
+### PlayerWillBeDeleted
 
 ::: tip 触发时机
 
@@ -373,8 +373,6 @@ $events->subscribe(Example\RenderSubscriber::class);
 ```php
 $event->addContent('<script></script>');
 ```
-
-
 
 ### RenderingHeader
 
