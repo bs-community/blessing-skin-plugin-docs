@@ -4,6 +4,8 @@ title: 视图
 
 # {{ $page.title }}
 
+[[toc]]
+
 视图其实就是 HTML，它使用的是 Laravel 的 Blade 模板引擎。
 
 关于视图更详细的用法，请参考 Laravel 5.2 文档中 [视图](http://d.laravel-china.org/docs/5.2/views) 一节。

@@ -4,6 +4,8 @@ title: 快速创建插件
 
 # {{ $page.title }}
 
+[[toc]]
+
 考虑到每次创建一个新的插件都需要进行一些如编写 `package.json` 这样的重复性机械劳动，以及一些新手可能对编写插件的 workflow 不太熟悉，我们创建了 [`generator-bs-plugin`](https://github.com/bs-community/generator-bs-plugin)。
 
 ## 介绍

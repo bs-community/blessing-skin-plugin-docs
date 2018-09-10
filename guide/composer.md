@@ -14,7 +14,7 @@ title: 使用 Composer
 
 Composer 会把依赖下载并解压在工程目录的 `vendor` 目录下，而 Blessing Skin 会自动扫描并加载 `vendor` 目录，因此您不需要任何的配置，即可轻松享受包管理带来的便利。
 
-## 使用
+## 用法
 
 在您的插件目录下，执行 `composer` 来安装依赖，例如：
 

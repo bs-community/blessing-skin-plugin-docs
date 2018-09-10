@@ -2,13 +2,15 @@
 title: 声明插件依赖
 ---
 
-# {{ $page.title }} 
+# {{ $page.title }}
 
 ::: warning
 
 此特性需要 Blessing Skin v3.5.0 或更高版本
 
 :::
+
+[[toc]]
 
 在开发的过程中，一个插件依赖于另一个插件是很常见的事；此外，您还可能希望插件对 Blessing Skin 的版本作出要求（例如您可能需要某个 Blessing Skin 版本才拥有的特性或功能）。
 
