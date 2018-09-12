@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Blessing Skin 插件开发文档',
-  description: '扩展您的 Blessing Skin 功能',
+  title: 'Blessing Skin 插件开发',
+  description: '扩展您的 Blessing Skin',
   base: '/blessing-skin-plugin-docs/',
   themeConfig: {
     nav: [
@@ -31,7 +31,6 @@ module.exports = {
     },
     repo: 'bs-community/blessing-skin-plugin-docs',
     repoLabel: 'GitHub',
-    docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
     editLinkText: '帮助我们完善这个页面',

@@ -4,13 +4,13 @@ title: 前端网络请求
 
 # {{ $page.title }}
 
+[[toc]]
+
 ::: warning
 
-本节仅适用于 Blessing Skin v4
+本节内容仅适用于 Blessing Skin v4
 
 :::
-
-[[toc]]
 
 ## 从 v3 迁移到 v4
 
