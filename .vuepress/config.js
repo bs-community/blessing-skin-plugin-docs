@@ -23,6 +23,8 @@ module.exports = {
         'route',
         'i18n',
         'backend-event',
+        'frontend-event',
+        'fetch',
         'dependency',
         'composer',
       ]
