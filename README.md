@@ -23,12 +23,14 @@ features:
 
 赞助时可以在留言中作个备注，以便写在下方的列表中表示感谢。
 
+### 赞助者
+
+- [621sama](https://github.com/printempw) - ￥30
+
+### 赞助码
+
 <span style="display: flex; align-items: center;">
   <img src="./alipay.jpg" width="450" />
   &nbsp;&nbsp;
   <img src="./wechat.png" width="450" />
 </span>
-
-### 赞助者
-
-暂无
