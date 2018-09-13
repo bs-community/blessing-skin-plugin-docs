@@ -22,6 +22,7 @@ module.exports = {
         'view',
         'route',
         'i18n',
+        'models',
         'backend-event',
         'frontend-event',
         'fetch',
