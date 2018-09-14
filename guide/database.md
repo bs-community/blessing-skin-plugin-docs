@@ -28,8 +28,6 @@ if (! Schema::hasTable('my_table')) {
 }
 ```
 
-
-
 ## 通过 `DB` Facade 来操作数据库
 
 Laravel 提供了 `DB` Facade 来让您操作数据库，这是一种比较底层的做法，需要您对数据库操作有一定的了解。关于 `DB` Facade 可阅读 [Laravel 文档](https://laravel-china.org/docs/laravel/5.6/database/1397)。
