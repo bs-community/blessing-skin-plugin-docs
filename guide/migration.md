@@ -81,7 +81,7 @@ Font Awesome 已经升级到 v5，具体变化请阅读 Font Awesome 的文档�
 
 ### 前端多语言
 
-现在所有的多语言文本都被存储在 `blessing.i18n` 下。对于插件的多语言，只需要在 `blessing.i18n` 对象下创建一个属性**（不需要指明语种）**。像这样：
+现在所有的多语言文本都被存储在 `blessing.i18n` 下。对于插件的多语言，只需要在 `blessing.i18n` 对象下创建一个属性，**不需要指明语种**。像这样：
 
 ```javascript
 blessing.i18n.configGenerator = {
