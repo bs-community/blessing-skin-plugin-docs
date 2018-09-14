@@ -28,6 +28,7 @@ module.exports = {
         'auth',
         'lifecycle',
         'database',
+        'frontend-global',
         'backend-event',
         'frontend-event',
         'fetch',
