@@ -32,6 +32,7 @@ module.exports = {
         'fetch',
         'dependency',
         'composer',
+        'migration',
       ]
     },
     repo: 'bs-community/blessing-skin-plugin-docs',
