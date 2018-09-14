@@ -25,6 +25,7 @@ module.exports = {
         'option',
         'helpers',
         'models',
+        'auth',
         'lifecycle',
         'database',
         'backend-event',
