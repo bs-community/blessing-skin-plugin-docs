@@ -22,6 +22,8 @@ module.exports = {
         'view',
         'route',
         'i18n',
+        'option',
+        'helpers',
         'models',
         'backend-event',
         'frontend-event',
