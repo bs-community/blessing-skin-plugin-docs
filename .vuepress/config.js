@@ -26,6 +26,7 @@ module.exports = {
         'helpers',
         'models',
         'lifecycle',
+        'database',
         'backend-event',
         'frontend-event',
         'fetch',
