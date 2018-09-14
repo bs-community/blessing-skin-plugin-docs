@@ -4,7 +4,7 @@ module.exports = {
   base: '/blessing-skin-plugin-docs/',
   themeConfig: {
     nav: [
-      { text: '教程', link: '/guide/' },
+      { text: '教程', link: '/guide/scaffold.html' },
       {
         text: '相关资源',
         items: [
