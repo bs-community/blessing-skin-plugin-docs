@@ -52,7 +52,7 @@ $form->handle();
 
 渲染后的表单在页面中会有如下显示：
 
-![](../images/form1.png)
+![表单渲染结果](../images/form1.png)
 
 默认情况下，Blessing Skin 会对表单中各个表单项使用 `<table>` 元素进行排版。如果您不希望这样做，可以调用表单实例的 `renderWithOutTable` 方法（笔者注：[@printempw](https://github.com/printempw) 在定义这个方法时应该是写了个 typo，因为 `WithOut` 其实应该是 `Without`，这是一个单词）。不过通常不建议这么做。
 
@@ -114,7 +114,7 @@ $form->after(function ($form) {
 $form->addMessage('写文档不容易啊');
 ```
 
-![](../images/form2.png)
+![info 型消息](../images/form2.png)
 
 您还可以输出不同类型的消息：
 
@@ -122,19 +122,19 @@ $form->addMessage('写文档不容易啊');
 $form->addMessage('写文档不容易啊', 'success');
 ```
 
-![](../images/form3.png)
+![success 型消息](../images/form3.png)
 
 ```php
 $form->addMessage('写文档不容易啊', 'warning');
 ```
 
-![](../images/form4.png)
+![warning 型消息](../images/form4.png)
 
 ```php
 $form->addMessage('写文档不容易啊', 'danger');
 ```
 
-![](../images/form5.png)
+![danger 型消息](../images/form5.png)
 
 ## 添加按钮
 
@@ -161,7 +161,7 @@ $form->addButton([
 ]);
 ```
 
-![](../images/form6.png)
+![按钮](../images/form6.png)
 
 ## 传递数据
 
@@ -175,31 +175,31 @@ $form->addButton([
 $form->type('info');
 ```
 
-![](../images/form7.png)
+![info 型边框](../images/form7.png)
 
 ```php
 $form->type('success');
 ```
 
-![](../images/form8.png)
+![success 型边框](../images/form8.png)
 
 ```php
 $form->type('warning');
 ```
 
-![](../images/form9.png)
+![warning 型边框](../images/form9.png)
 
 ```php
 $form->type('danger');
 ```
 
-![](../images/form10.png)
+![danger 型边框](../images/form10.png)
 
 ```php
 $form->type('default');
 ```
 
-![](../images/form11.png)
+![default 型边框](../images/form11.png)
 
 ## 添加控件
 
@@ -219,7 +219,7 @@ $form = Option::form('my_form', '表单', function ($form) {
 $form->text('my_text', '文本输入框');
 ```
 
-![](../images/form12.png)
+![文本框](../images/form12.png)
 
 您可以向文本框中添加占位符：
 
@@ -227,7 +227,7 @@ $form->text('my_text', '文本输入框');
 $form->text('my_text', '文本输入框')->placeholder('占位符');
 ```
 
-![](../images/form13.png)
+![带占位符的文本框](../images/form13.png)
 
 ### 复选框
 
@@ -235,7 +235,7 @@ $form->text('my_text', '文本输入框')->placeholder('占位符');
 $form->checkbox('my_checkbox', '复选框');
 ```
 
-![](../images/form14.png)
+![复选框](../images/form14.png)
 
 您还可以向复选框后面添加标签。
 
@@ -243,7 +243,7 @@ $form->checkbox('my_checkbox', '复选框');
 $form->checkbox('my_checkbox', '复选框')->label('标签');
 ```
 
-![](../images/form15.png)
+![带标签的复选框](../images/form15.png)
 
 ### 文本域
 
@@ -251,7 +251,7 @@ $form->checkbox('my_checkbox', '复选框')->label('标签');
 $form->textarea('my_textarea', '文本域');
 ```
 
-![](../images/form16.png)
+![文本域](../images/form16.png)
 
 您可以指定文本域中有多少行：
 
@@ -267,22 +267,22 @@ $form->select('my_select', '下拉框')
     ->option('option2', '选项2');
 ```
 
-![](../images/form17.png)
+![下拉框](../images/form17.png)
 
-![](../images/form18.png)
+![展开的下拉框](../images/form18.png)
 
 其中 `option` 方法的第一个参数是该选项的值，这个值会传递到后端并保存到数据库；第二个参数是显示在页面中的文本。
 
-### 文本组
+### 文本框组
 
 ```php
-$form->group('my_group', '文本组')
+$form->group('my_group', '文本框组')
     ->text('input1')
     ->addon('至')
     ->text('input2');
 ```
 
-![](../images/form19.png)
+![文本框组](../images/form19.png)
 
 `text` 方法和 `addon` 方法可以以任意数量搭配使用，没有限制。
 
