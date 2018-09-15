@@ -20,7 +20,7 @@ return function () {
 };
 ```
 
-关于路由更详细的用法，请参考 Laravel 5.1 文档中 [HTTP 路由](http://d.laravel-china.org/docs/5.2/routing) 一节。
+关于路由更详细的用法，请参考 Laravel 文档中 [HTTP 路由](http://d.laravel-china.org/docs/5.6/routing) 一节。
 
 ## 最简单的路由
 
