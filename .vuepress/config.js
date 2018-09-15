@@ -23,6 +23,7 @@ module.exports = {
         'route',
         'i18n',
         'option',
+        'form',
         'helpers',
         'models',
         'auth',
