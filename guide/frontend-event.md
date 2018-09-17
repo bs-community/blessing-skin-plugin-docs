@@ -54,7 +54,7 @@ blessing.event.emit('eventA', data)  // 假设 `data` 变量已定义
 
 正如上文所说的，同一事件中所有的回调函数都会被执行。
 
-值得注意的是，要小心如果有多个正在监听的回调函数，小心它们之间对数据的修改会不会有冲突。如果您希望传递一个只读的 JavaScript 对象，那么您可以传递 `Object.freeze(data)` 作为参数，调用 `Object.freeze` 不会影响原来的 JavaScript 对象。（注意，`Object.freeze` 只做一层的处理，多层嵌套的属性仍然可以被修改，此时您可能需要递归地调用 `Object.freeze`）
+值得注意的是，要小心如果有多个正在监听的回调函数，小心它们之间对数据的修改会不会有冲突。如果您希望传递一个只读的 JavaScript 对象，那么您可以传递 `Object.freeze(data)` 作为参数，这会将该对象的所有属性设为只读。（注意，`Object.freeze` 只做一层的处理，多层嵌套的属性仍然可以被修改，此时您可能需要递归地调用 `Object.freeze`）
 
 ## 所有可用的事件
 
