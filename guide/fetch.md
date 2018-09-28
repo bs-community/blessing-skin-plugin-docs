@@ -32,7 +32,7 @@ title: 前端网络请求
 
 其中有些插件为了修改由前端发送后端的数据，将原有 `fetch` 覆盖掉。这种做法在 Blessing Skin v4 中是绝对不允许的。因为 Blessing Skin v4 使用了浏览器原生的 Fetch API，如果将 `fetch` 覆盖，将会影响 Blessing Skin 本身的运行。
 
-但修改数据这种需求还是有的。为此，在 Blessing Skin v4 中，我们在进行 `fetch` 操作之前，将会触发一个名为 `beforeFetch` 的事件。您可以通过监听这个事件，在事件触发之时，对请求的数据进行数据，用法详见下文。
+但修改数据这种需求还是有的。为此，在 Blessing Skin v4 中，我们在进行 `fetch` 操作之前，将会触发一个名为 `beforeFetch` 的事件。您可以通过监听这个事件，在事件触发之时，对请求的数据进行修改，用法详见下文。
 
 ## 使用 `blessing.fetch`
 
