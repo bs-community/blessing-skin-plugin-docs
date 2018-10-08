@@ -190,7 +190,9 @@ $events->subscribe(Example\RenderSubscriber::class);
 
 :::
 
-#### rawPasswd
+#### rawPassword
+
+> 注意：在 Blessing Skin v3.5.0 及更早版本，此属性的名称为 `rawPasswd`。
 
 类型：字符串
 
