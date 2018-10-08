@@ -121,7 +121,13 @@ trans('configGenerator.key1.text1')
 
 ### 事件
 
+#### 新增
+
 新增了 `ClosetWillBeFiltered` 事件和 `ClosetWasFiltered` 事件。
+
+#### 更改
+
+`EncryptUserPassword` 事件中的 `rawPasswd` 属性现已更名为 `rawPassword`，类型保持不变。
 
 ## 从 3.4.0 迁移到 3.5.0
 
