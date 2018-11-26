@@ -22,7 +22,7 @@ title: 前端网络请求
 
 而从 Blessing Skin v4 开始，所有的网络请求使用真正的、浏览器提供的 `fetch` 函数。因此，如果您要进行迁移，有两种解决办法。
 
-第一种是将 `fetch` 换成 `$.ajax`，这是临时的解决办法。因为在 Blessing Skin v4 中，jQuery 库没有并移除，因此 jQuery 中所有方法都能继续使用。但要注意的是，`$.ajax` 方法返回的并不是真正的 `Promise`，幸运的是，它返回的对象是 thenable 对象，因此通过简单地使用 `Promise.resolve()` 即可解决。但是，使用 `$.ajax` 函数，您将无法获得一些 `blessing.fetch` 拥有的便利特性。
+第一种是将 `fetch` 换成 `$.ajax`，这是临时的解决办法。因为在 Blessing Skin v4 中，jQuery 库没有被移除，因此 jQuery 中所有方法都能继续使用。但要注意的是，`$.ajax` 方法返回的并不是真正的 `Promise`，幸运的是，它返回的对象是 thenable 对象，因此通过简单地使用 `Promise.resolve()` 即可解决。但是，使用 `$.ajax` 函数，您将无法获得一些 `blessing.fetch` 拥有的便利特性。
 
 第二种是使用由 Blessing Skin v4 提供的用于进行网络请求的函数，这是推荐的做法，但稍微需要一点时间去更改您的代码。具体用法见下文。
 
