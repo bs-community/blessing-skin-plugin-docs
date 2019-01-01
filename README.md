@@ -25,7 +25,8 @@ features:
 
 ### 赞助者
 
-- [621sama](https://github.com/printempw) - ￥30
+- [printempw](https://github.com/printempw) - ￥30
+- [Little_Qiu](https://github.com/tnqzh123) - ￥5
 
 ### 赞助码
 
