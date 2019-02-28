@@ -10,7 +10,7 @@ title: 迁移指南
 
 ### 底层升级
 
-Blessing Skin v4 中，Laravel 框架的版本已升级到 5.7，同时 PHP 需要 7.1.3 或更高版本。请您确保您的插件代码与 PHP 7.1.3+ 和 Laravel 5.7 兼容。
+Blessing Skin v4 中，Laravel 框架的版本已升级到 5.8，同时 PHP 需要 7.1.8 或更高版本。请您确保您的插件代码与 PHP 7.1.8+ 和 Laravel 5.8 兼容。
 
 ### 用户认证
 
@@ -114,6 +114,7 @@ trans('configGenerator.key1.text1')
 - 辅助函数 `die_with_utf8_encoding` 已被移除，建议使用 `throw new PrettyPageException` 以获取更友好的报错界面。
 - 辅助函数 `bs_announcement` 已被移除，如果有需要，请使用：`app('parsedown')->text(option_localized('announcement'));`。
 - 辅助函数 `can_moderate_texture` 已被移除。
+- 辅助函数 `menv` 已被移除，请使用由 Laravel 提供的全局辅助函数 `env`。
 
 ### Composer 依赖
 
