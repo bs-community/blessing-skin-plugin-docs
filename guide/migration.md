@@ -109,6 +109,10 @@ trans('configGenerator.key1.text1')
 
 因此，`Player` 模型上的 `preference`、`tid_steve` 和 `tid_alex` 不再有任何意义，Blessing Skin 内部也不会使用这些字段，取而代之，请使用新的 `tid_skin` 字段。
 
+### `Texture` 模型
+
+`Texture` 模型实例上的 `setPrivacy` 已被移除，请直接更新 `$texture->public` 的值并 `$texture->save()`。
+
 ### 中间件
 
 `admin` 中间件现在不会先运行 `CheckAuthenticated` 中间件再做权限检查，即 `admin` 中间件直接获取 `Auth::user()`。这是安全的，不会因为用户未登录而报错，前提是您必需使用 `auth` 中间件。
