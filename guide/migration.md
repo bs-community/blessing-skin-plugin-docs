@@ -103,6 +103,12 @@ trans('configGenerator.key1.text1')
 
 `User` 模型实例上的 `getToken` 方法已被移除，因为认证系统已被重构，这个方法已经没有意义。
 
+### `Player` 模型
+
+由于从 4.0.0 开始，角色不再拥有「模型」的概念，即角色设置的材质是怎样的模型，JSON API 会自动正确设置模型。
+
+因此，`Player` 模型上的 `preference`、`tid_steve` 和 `tid_alex` 不再有任何意义，Blessing Skin 内部也不会使用这些字段，取而代之，请使用新的 `tid_skin` 字段。
+
 ### 中间件
 
 `admin` 中间件现在不会先运行 `CheckAuthenticated` 中间件再做权限检查，即 `admin` 中间件直接获取 `Auth::user()`。这是安全的，不会因为用户未登录而报错，前提是您必需使用 `auth` 中间件。
