@@ -348,21 +348,13 @@ $user->setScore(-10, 'plus');
 
 这个字段记录的是角色的拥有者的 `uid`。
 
-### `player_name`
+### `name`
 
 这个字段记录的是角色名。
 
-### `preference`
+### `tid_skin`
 
-这个字段记录的是该角色的偏好模型。目前可以有两种值，分别是 `default` 和 `slim`。（分别代表 Steve 皮肤模型和 Alex 皮肤模型）
-
-### `tid_steve`
-
-这个字段记录的是该角色上 Steve 皮肤模型所对应的材质的 `tid`。
-
-### `tid_alex`
-
-这个字段记录的是该角色上 Alex 皮肤模型所对应的材质的 `tid`。
+这个字段记录的是该角色上皮肤所对应的材质的 `tid`。
 
 ### `tid_cape`
 
@@ -441,24 +433,6 @@ $player->clearTexture('steve');
 // 同时删除 Steve 皮肤模型和披风
 $player->clearTexture(['steve', 'cape']);
 ```
-
-### `setPreference`
-
-设置角色的偏好模型。调用此方法时，会更新 `last_modified` 字段的值，同时触发 `PlayerProfileUpdated` 事件。
-
-参数：
-
-- `type` - 模型类型。可以是 `default` 或 `slim`。
-
-返回值：该角色模型实例本身。
-
-### `getPreference`
-
-获取角色的偏好模型。
-
-参数：无
-
-返回值：`default` 和 `slim`。
 
 ### `rename`
 
