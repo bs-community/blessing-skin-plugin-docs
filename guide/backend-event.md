@@ -100,46 +100,6 @@ $events->subscribe(Example\RenderSubscriber::class);
 
 含义：检查角色是否存在时，要检查的角色的名称。
 
-### ClosetWasFiltered
-
-::: tip 触发时机
-
-用户的衣柜在被过滤掉无效材质后。
-
-:::
-
-::: warning
-
-使用这个事件需要 Blessing Skin v4 或更高版本
-
-:::
-
-#### closet
-
-类型：`App\Models\Closet`
-
-含义：该用户的衣柜实例
-
-### ClosetWillBeFiltered
-
-::: tip 触发时机
-
-用户的衣柜在被过滤掉无效材质之前。
-
-:::
-
-::: warning
-
-使用这个事件需要 Blessing Skin v4 或更高版本
-
-:::
-
-#### closet
-
-类型：`App\Models\Closet`
-
-含义：该用户的衣柜实例
-
 ### ConfigureAdminMenu
 
 ::: tip 触发时机

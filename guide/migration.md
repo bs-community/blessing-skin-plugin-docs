@@ -115,6 +115,28 @@ trans('configGenerator.key1.text1')
 
 `Texture` 模型实例上的 `setPrivacy` 已被移除，请直接更新 `$texture->public` 的值并 `$texture->save()`。
 
+`likes` 字段现在是只读的。
+
+### `Closet` 模型
+
+`Closet` 模型已被移除，请不要再使用 `App\Models\Closet`。
+
+如果您需要访问某个用户的衣柜，您可以像下面这样调用：
+
+```php
+$user->closet()->get();
+```
+
+像上面的结果，可以获取衣柜中的所有物品，返回一个 Laravel Collection，其中每个元素是一个 `Texture` 模型实例。
+
+另外，如果需要获取物品的名称（不是材质在皮肤库中的名称），则可以：
+
+```php
+$texture->pivot->item_name;
+```
+
+Blessing Skin 内部基于 Laravel 的模型多对多关联来实现衣柜功能，更多信息可阅读 [Laravel 文档](https://learnku.com/docs/laravel/5.8/eloquent-relationships/2295)。
+
 ### 中间件
 
 `admin` 中间件现在不会先运行 `CheckAuthenticated` 中间件再做权限检查，即 `admin` 中间件直接获取 `Auth::user()`。这是安全的，不会因为用户未登录而报错，前提是您必需使用 `auth` 中间件。

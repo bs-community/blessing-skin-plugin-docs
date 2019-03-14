@@ -8,11 +8,11 @@ title: 数据与模型
 
 ## 简介
 
-Blessing Skin 中的每个模型都与数据库的数据表有联系，而每个模型实例都相当于数据表中的一行（row）数据。Blessing Skin 中有四个模型，除了 `Closet` 模型，其它的三个都是 Laravel Eloquent ORM 模型。如果要获取关于 Laravel Eloquent ORM 的更多信息，建议阅读 [Laravel 文档](https://laravel-china.org/docs/laravel/5.6/eloquent/1403)。
+Blessing Skin 中的每个模型都与数据库的数据表有联系，而每个模型实例都相当于数据表中的一行（row）数据。Blessing Skin 所有的三个模型都是 Laravel Eloquent ORM 模型。如果要获取关于 Laravel Eloquent ORM 的更多信息，建议阅读 [Laravel 文档](https://laravel-china.org/docs/laravel/5.8/eloquent/1403)。
 
-目前 Blessing Skin 中共有四个模型，分别是 `User`、`Player`、`Texture` 和 `Closet`，它们均位于 `App\Models` 下。我们将会分别详细介绍这四个模型，并在最后讲述这些模型之间的关联，以及如何利用这些关联来简化代码。
+目前 Blessing Skin 中共有四个模型，分别是 `User`、`Player` 和 `Texture`，它们均位于 `App\Models` 下。我们将会分别详细介绍这四个模型，并在最后讲述这些模型之间的关联，以及如何利用这些关联来简化代码。
 
-值得注意的是，所有的 Laravel Eloquent ORM 模型（即除了 `Closet` 以外的模型），都继承于 `Illuminate\Database\Eloquent\Model`，通过此来拥有 Eloquent ORM 的特性。即使这些模型的类上没有声明属性，您依然可以访问模型实例上数据。例如，`User` 模型在数据库中对应的数据表上存在 `score` 这个字段，然而您在 `App\Models\User` 这个类中并没有看到 `score` 这个类的属性，即使这样，您还是可以像 `$user->score` 这样来获取或设置 `score` 这个字段上的值。
+值得注意的是，所有的 Laravel Eloquent ORM 模型都继承于 `Illuminate\Database\Eloquent\Model`，通过此来拥有 Eloquent ORM 的特性。即使这些模型的类上没有声明属性，您依然可以访问模型实例上数据。例如，`User` 模型在数据库中对应的数据表上存在 `score` 这个字段，然而您在 `App\Models\User` 这个类中并没有看到 `score` 这个类的属性，即使这样，您还是可以像 `$user->score` 这样来获取或设置 `score` 这个字段上的值。
 
 ## 基本操作
 
@@ -32,7 +32,7 @@ $user = User::find(1);
 $users = User::find('score', '>', 50)->get();
 ```
 
-这将返回所有符合条件的用户的集合（关于集合详见 [Laravel 文档](https://laravel-china.org/docs/laravel/5.6/eloquent-collections/1405)）。如果没有找到符合条件的用户，它将返回一个空集合。调用 `isEmpty` 方法可以判断是否为空集合：
+这将返回所有符合条件的用户的集合（关于集合详见 [Laravel 文档](https://laravel-china.org/docs/laravel/5.8/eloquent-collections/1405)）。如果没有找到符合条件的用户，它将返回一个空集合。调用 `isEmpty` 方法可以判断是否为空集合：
 
 ```php
 $users->isEmpty();
@@ -145,14 +145,6 @@ $user->save();
 参数：无
 
 返回值：类型为 `bool`，表示该用户是否管理员。（超级管理员也属于管理员）
-
-### `getCloset`
-
-返回该用户的衣柜。
-
-参数：无
-
-返回值：类型为 `App\Models\Closet`。
 
 ### `verifyPassword`
 
@@ -502,7 +494,7 @@ $player->clearTexture(['steve', 'cape']);
 
 ### `likes`
 
-这个字段记录的是材质被收藏的数量。类型为整数。
+这个字段记录的是材质被收藏的数量。类型为整数。注意这个字段是只读的。
 
 ### `hash`
 
