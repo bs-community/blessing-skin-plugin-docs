@@ -156,10 +156,6 @@ Blessing Skin 内部基于 Laravel 的模型多对多关联来实现衣柜功能
 
 ### 事件
 
-#### 新增
-
-新增了 `ClosetWillBeFiltered` 事件和 `ClosetWasFiltered` 事件。
-
 #### 更改
 
 `EncryptUserPassword` 事件中的 `rawPasswd` 属性现已更名为 `rawPassword`，类型保持不变。
