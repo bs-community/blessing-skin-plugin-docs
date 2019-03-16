@@ -8,9 +8,9 @@ title: 视图
 
 视图其实就是 HTML，它使用的是 Laravel 的 Blade 模板引擎。
 
-关于视图更详细的用法，请参考 Laravel 5.2 文档中 [视图](http://d.laravel-china.org/docs/5.2/views) 一节。
+关于视图更详细的用法，请参考 Laravel 5.8 文档中 [视图](http://d.laravel-china.org/docs/5.8/views) 一节。
 
-关于 Blade 模板更详细的用法，请参考 Laravel 5.2 文档中 [Blade 模板](http://d.laravel-china.org/docs/5.2/blade) 一节。
+关于 Blade 模板更详细的用法，请参考 Laravel 5.8 文档中 [Blade 模板](http://d.laravel-china.org/docs/5.8/blade) 一节。
 
 ## 添加视图文件
 
@@ -29,7 +29,7 @@ public function showLoginPage()
 
 注意必须要指定命名空间。
 
-您可能注意到上面的例子中指定视图文件时使用了小数点`.`，这表示该视图文件位于插件目录下 `views/hello` 目录中的 `world.blade.php` 或 `world.tpl`。也就是说，使用小数点`.`来进行目录层级定位。
+您可能注意到上面的例子中指定视图文件时使用了小数点`.`，这表示该视图文件位于插件目录下 `views/hello` 目录中的 `world.blade.php`。也就是说，使用小数点`.`来进行目录层级定位。
 
 ## 传递数据
 

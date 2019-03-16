@@ -45,6 +45,10 @@ Font Awesome 已经升级到 v5，具体变化请阅读 Font Awesome 的文档�
 |   getTimeFormatted   | get_datetime_string |
 |  getStringReplaced   | get_string_replaced |
 
+### 视图文件
+
+不再支持 `.tpl` 的后缀，请使用 `.blade.php`。
+
 ### 前端函数
 
 由于 4.0.0 使用 webpack 进行前端构建，因此原来在 3.5.0 中大部分全局 JavaScript 函数不再可用。
