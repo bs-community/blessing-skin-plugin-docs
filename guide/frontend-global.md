@@ -100,5 +100,4 @@ Blessing Skin 的事件系统中用于触发事件和监听事件的方法，具
 
 目前在 `blessing.notify` 中有以下方法：
 
-- `showMsg`
 - `showModal`

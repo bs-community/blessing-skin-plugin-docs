@@ -63,7 +63,9 @@ Font Awesome 已经升级到 v5，具体变化请阅读 Font Awesome 的文档�
 
 #### `showModal` 和 `showMsg` 函数
 
-这两个函数已被移至 `blessing.notify` 对象中，功能保持不变。
+`showModal` 已被移至 `blessing.notify` 对象中，功能保持不变。
+
+`showMsg` 则已被移除。
 
 #### `fetch` 函数
 
