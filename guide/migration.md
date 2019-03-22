@@ -155,6 +155,8 @@ Blessing Skin 内部基于 Laravel 的模型多对多关联来实现衣柜功能
 - 辅助函数 `bs_announcement` 已被移除，如果有需要，请使用：`app('parsedown')->text(option_localized('announcement'));`。
 - 辅助函数 `can_moderate_texture` 已被移除。
 - 辅助函数 `menv` 已被移除，请使用由 Laravel 提供的全局辅助函数 `env`。
+- 辅助函数 `assets` 已被移除，通常这不会影响插件，因为插件不应该使用这个函数。
+- 辅助函数 `get_current_url` 已被移除。
 
 ### Composer 依赖
 
