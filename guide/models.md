@@ -152,7 +152,7 @@ $user->save();
 
 参数：
 
-- `rawPasswd` - 用于进行对比的原始密码（即还没有 hash 过的密码）
+- `rawPassword` - 用于进行对比的原始密码（即还没有 hash 过的密码）
 
 返回值：类型为 `bool`，表示密码是否正确。
 
@@ -176,64 +176,6 @@ $user->save();
 - `password` - 未 hash 过的新密码
 
 返回值：类型为 `bool`，表明是否成功更改密码。
-
-### `getPermission`
-
-获取该用户的权限级别。
-
-参数：无
-
-### `setPermission`
-
-更改该用户的权限级别。注意，调用此方法不同于直接 `$user->persmission = 0`，直接赋值不会立即更新数据库，而调用此方法会立即更新数据库。
-
-参数：
-
-- `permission` - 新的权限级别值
-
-返回值：类型为 `bool`，表明是否成功更改权限级别。
-
-```php
-// 封禁该用户
-$user->setPermission(User::BANNED);
-// 这等同于
-$user->permission = User::BANNED;
-$user->save();
-```
-
-### `setEmail`
-
-更改用户的邮箱地址。注意，调用此方法会立即更新数据库。
-
-参数：
-
-- `email` - 新的邮箱地址
-
-返回值：类型为 `bool`，表明是否成功更改邮箱地址。
-
-### `getNickName`
-
-获取用户的昵称。
-
-参数：无
-
-返回值：如果用户存在昵称，则返回昵称；如果用户没有设置昵称，则返回用户的邮箱地址；如果用户不存在，则返回「用户不存在」的提示字符串。
-
-### `setNickName`
-
-更改用户的昵称。
-
-参数：
-
-- `nickname` - 新的昵称。
-
-返回值：类型为 `bool`，表明是否成功更改昵称。
-
-### `getScore`
-
-获取用户的积分。
-
-参数：无
 
 ### `setScore`
 
@@ -291,32 +233,6 @@ $user->setScore(-10, 'plus');
 参数：无
 
 返回值：类型为 `bool`，表示用户在当前时刻是否能签到。
-
-### `getLastSignTime`
-
-获取上次签到的时间。
-
-参数：无
-
-返回值：类型为 `string`，为格式化后的时间。
-
-### `getAvatarId`
-
-获取用户头像所对应材质的 `tid`。
-
-参数：无
-
-返回值：材质的 `tid`
-
-### `setAvatar`
-
-设置用户的头像。
-
-参数：
-
-- `tid` - 材质的 `tid`
-
-返回值：类型为 `bool`，表明是否成功更改密码。
 
 ### `delete`
 
@@ -382,70 +298,6 @@ $user->setScore(-10, 'plus');
 $player->getTexture('steve');  // 返回 Steve 皮肤模型对应的材质 hash
 ```
 
-### `setTexture`
-
-更改角色的材质。调用此方法时，会更新 `last_modified` 字段的值，同时触发 `PlayerProfileUpdated` 事件。
-
-参数：
-
-- `tids` - 这个参数是键为材质类型、值为 `tid` 的数组。
-
-返回值：该角色模型实例本身。
-
-```php
-// 仅仅更新 Steve 皮肤模型
-$player->setTexture(['steve' => 1]);
-
-// 同时更新 Steve 皮肤模型和披风
-$player->setTexture(['steve' => 1, 'cape' => 2]);
-```
-
-### `checkForInvalidTextures`
-
-删除角色上的无效材质。调用此方法不会更新 `last_modified` 字段的值。通常插件不会用到这个方法。
-
-参数：无
-
-返回值：该角色模型实例本身。
-
-### `clearTexture`
-
-重置角色上指定类型的材质。
-
-参数：
-
-- `types` - 类型可以为字符串（仅仅删除一种类型的材质）或数组（删除多种类型的材质）。材质类型可以是 `steve`、`alex` 和 `cape`。
-
-返回值：该角色模型实例本身。
-
-```php
-// 仅仅删除 Steve 皮肤模型
-$player->clearTexture('steve');
-
-// 同时删除 Steve 皮肤模型和披风
-$player->clearTexture(['steve', 'cape']);
-```
-
-### `rename`
-
-更改角色名。调用此方法时，会更新 `last_modified` 字段的值，同时触发 `PlayerProfileUpdated` 事件。
-
-参数：
-
-- `newName` - 新的角色名。
-
-返回值：该角色模型实例本身。
-
-### `setOwner`
-
-更改角色的拥有者。调用此方法 *不会* 更新 `last_modified` 字段的值，只触发 `PlayerProfileUpdated` 事件。
-
-参数：
-
-- `uid` - 拥有者的 `uid`。
-
-返回值：该角色模型实例本身。
-
 ### `getJsonProfile`
 
 获取角色的 JSON Profile 信息。通常插件不会用到这个方法。
@@ -492,10 +344,6 @@ $player->clearTexture(['steve', 'cape']);
 
 这个字段记录的是材质的类型。它只能是 `steve` 或 `alex` 或 `cape`。
 
-### `likes`
-
-这个字段记录的是材质被收藏的数量。类型为整数。注意这个字段是只读的。
-
 ### `hash`
 
 这个字段记录的是材质文件的 hash 值，它是唯一的（除非 hash 算法出现了碰撞）。
@@ -535,160 +383,7 @@ $texture->setPrivacy(true);   // 材质已被设置成公开
 $texture->setPrivacy(false);  // 材质已被设置成私有
 ```
 
-## `Closet` 模型
-
-`Closet` 模型与上面的模型有比较大的区别。它不是继承于 `Illuminate\Database\Eloquent\Model`，因此 Laravel Eloquent ORM 上的一些特性和方法不能应用在 `Closet` 模型上。`Closet` 模型有它自己的一系列实例方法。
-
-对于继承于 `Illuminate\Database\Eloquent\Model` 的模型，如果要取回一个模型实例，通常的做法是像 `User::find($uid)` 或 `User::where('email', $email)->first()` 这样。但 `Closet` 模型不能这样，您只能通过传统地构造一个类的方式来取回一个衣柜模型实例。
-
-每个衣柜物品都是一个键值对数组，数组中键有 `tid`、`name`、`type` 和 `add_at`。其中 `tid` 为该材质的 `tid`；`name` 是用户将材质收藏到衣柜中时指定的名称，可以不等同于材质自身的名称；`type` 为材质类型；`add_at` 为用户将材质收藏到衣柜时的时间。
-
-### 实例属性
-
-`Closet` 模型实例上只有一个公开可访问的属性。这个属性是 `uid`，代表的是该衣柜对应的用户的 `uid`，但通常不应该去修改这个属性。
-
-### 构造函数
-
-构造函数接收一个必需的参数，为用户的 `uid`。Blessing Skin 会根据这个 `uid` 来检索该用户的衣柜。在构造 `Closet` 类时，会有以下过程：
-
-1. 检查该用户的衣柜数据是否存在于数据库中，若不存在则初始化。
-2. 取出该用户的衣柜数据。
-3. 触发 `ClosetWillBeFiltered` 事件。（仅在 Blessing Skin v4 或更高版本）
-4. 遍历该用户的衣柜，删除掉衣柜中已经不存在的材质以及被设置成私有但上传者不是该用户的材质。
-5. 触发 `ClosetWasFiltered` 事件。（仅在 Blessing Skin v4 或更高版本）
-6. 如果「删除材质后返还积分」的选项被打开，则返还相应的积分。
-7. 衣柜加载完成。
-
-### 静态方法
-
-`Closet` 模型上有一个静态方法 `all`，它返回全部用户的衣柜信息。通常不建议您使用这个方法，因为它会查询整个 `closets` 数据表，而且您很少会有查询全部用户的衣柜这种需求。
-
----
-
-下面介绍 `Closet` 模型实例上的方法。
-
-### `getItems`
-
-返回衣柜中的物品，可以指定分类。
-
-参数：
-
-- `category` - 选择要返回的分类。这个参数是可选的，默认为 `all`，表示返回所有皮肤和披风。如果指定 `skin`，则只返回全部皮肤；如果指定 `cape`，则只返回全部披风。
-
-返回值：类型为数组，数组中的元素类型为衣柜物品（这是一个键值对数组），包含 `tid`、`name`、`type` 和 `add_at`。
-
-```php
-// 获取全部物品
-$closet->getItems();
-
-// 仅获取皮肤
-$closet->getItems('skin');
-
-// 仅获取披风
-$closet->getItems('cape');
-```
-
-### `add`
-
-添加一个材质到衣柜中。
-
-参数：
-
-- `tid` - 要添加的材质的 `tid`
-
-- `name` - 名称。这个名称是在衣柜中的名称，它可以与材质自己的名称不同。
-
-返回值：如果衣柜中已经存在该材质，则返回 `false`；否则添加成功，返回 `true`。
-
-```php
-$closet->add(1, '我刚刚收藏的');  // 添加物品到衣柜
-```
-
-### `has`
-
-查询一个材质是否在衣柜中。
-
-参数：
-
-- `tid` - 要查询的材质的 `tid`
-
-返回值：类型为 `bool`，表明材质是否在衣柜中。
-
-```php
-if ($closet->has(1)) {
-    return '衣柜中有这个物品';
-} else {
-    return '没找到';
-}
-```
-
-### `get`
-
-查找一个衣柜物品。
-
-参数：
-
-- `tid` - 要查找的衣柜物品的对应材质 `tid`。
-
-返回值：如果找到，则返回该衣柜物品；如果找不到，返回 `null`。
-
-```php
-$item = $closet->get(1);
-$item['name'];    // 这是衣柜物品名称。
-$item['type'];    // 这是衣柜物品类型。
-$item['add_at'];  // 物品被添加时的时间。
-```
-
-### `rename`
-
-重命名一个衣柜物品。
-
-参数：
-
-- `tid` - 要重命名的衣柜物品的对应材质 `tid`。
-
-返回值：如果在衣柜中找不到该物品，则返回 `false`；否则重命名成功，返回 `true`。
-
-```php
-$closet->rename(1, '新名字');
-```
-
-### `remove`
-
-从衣柜中移除一个物品。
-
-参数：
-
-- `tid` - 要删除的衣柜物品的对应材质 `tid`
-
-返回值：如果在衣柜中找不到该物品，则舞台 `false`；否则删除成功，返回 `true`。
-
-```php
-$closet->remove(1);  // 已删除
-$closet->has(1);     // 返回 false
-```
-
-### `setTextures`
-
-直接更新该用户的衣柜。通常插件不应该直接使用这个方法，因为它会直接替换掉目前的衣柜数据。
-
-参数：
-
-- `textures` - 元素为衣柜物品的数组
-
-返回值：类型为 `int`。
-
-### `save`
-
-将对衣柜的改动保存到数据库中。
-
-参数：无
-
-返回值：如果衣柜的数据有更改，则更新数据库并返回 `true`；否则返回 `false`。
-
 ## 模型与模型之间的联系
-
-除了 `Closet` 模型之外（因为它没有继承于 `Illuminate\Database\Eloquent\Model`），其它的模型它们之间有可能存在着关联。我们可以利用这些关联来简化我们的代码。
 
 ### 关联
 
@@ -720,4 +415,4 @@ $players = Player::where('uid', $uid)->get();
 $players = $user->players()->where('preference', 'slim');
 ```
 
-更多关于模型关联的资料，可访问 [Laravel 文档](https://laravel-china.org/docs/laravel/5.6/eloquent-relationships/1404)。
+更多关于模型关联的资料，可访问 [Laravel 文档](https://laravel-china.org/docs/laravel/5.8/eloquent-relationships/1404)。

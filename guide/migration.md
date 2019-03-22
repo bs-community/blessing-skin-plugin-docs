@@ -109,6 +109,24 @@ trans('configGenerator.key1.text1')
 
 `User` 模型实例上的 `getToken` 方法已被移除，因为认证系统已被重构，这个方法已经没有意义。
 
+`User` 模型实例上的 `setEmail` 方法已被移除。
+
+`User` 模型实例上的 `getNickName` 方法已被移除。
+
+`User` 模型实例上的 `setNickName` 方法已被移除。
+
+`User` 模型实例上的 `getScore` 方法已被移除。
+
+`User` 模型实例上的 `getAvatarId` 方法已被移除。
+
+`User` 模型实例上的 `setAvatar` 方法已被移除。
+
+`User` 模型实例上的 `getLastSignTime` 方法已被移除。
+
+`User` 模型实例上的 `getPermission` 方法已被移除。
+
+`User` 模型实例上的 `setPermission` 方法已被移除。
+
 ### `Player` 模型（影响度：高）
 
 由于从 4.0.0 开始，角色不再拥有「模型」的概念，即角色设置的材质是怎样的模型，JSON API 会自动正确设置模型。
@@ -116,6 +134,16 @@ trans('configGenerator.key1.text1')
 因此，`Player` 模型上的 `preference`、`tid_steve` 和 `tid_alex` 字段均已被移除，取而代之，请使用新的 `tid_skin` 字段。
 
 另外，`player_name` 字段已更名为 `name`。
+
+`Player` 模型实例上的 `rename` 方法已被移除。
+
+`Player` 模型实例上的 `setOwner` 方法已被移除。
+
+`Player` 模型实例上的 `clearTexture` 方法已被移除。
+
+`Player` 模型实例上的 `setTexture` 方法已被移除。
+
+`Player` 模型实例上的 `checkForInvalidTextures` 方法已被移除。
 
 ### `Texture` 模型（影响度：中）
 
