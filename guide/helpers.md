@@ -8,30 +8,6 @@ Blessing Skin 中包含了一些的全局可用「辅助」PHP 函数，Blessing
 
 [[toc]]
 
-## `assets`
-
-::: warning
-
-此函数在 Blessing Skin v4 中已被废弃。
-
-:::
-
-返回前端资源的 URL。这个函数仅针对于 Blessing Skin 本身的前端资源，对于插件应该使用 `plugin_assets` 函数。
-
-```php
-$url = assets('index.js');
-
-// http://example.com/resources/assets/dist/index.js
-```
-
-## `avatar`
-
-返回用户头像的 URL。
-
-```php
-$avatarUrl = avatar(User::find(1), /* 头像边长 */64);
-```
-
 ## `bs_custom_copyright`
 
 返回页面底部的自定义版权信息。
@@ -88,16 +64,6 @@ $menu = bs_menu('admin'); // 管理面板的菜单
 
 ```php
 $html = bs_menu_render(bs_menu('user'));
-```
-
-## `bs_nickname`
-
-返回用户的昵称。
-
-```php
-$nickname = bs_nickname();  // 默认为当前用户
-
-$nickname = bs_nickname(User::find(1));  // 也可以手动传入一个用户模型实例
 ```
 
 ## `bs_role`
@@ -271,12 +237,4 @@ $plugin = plugin('example-plugin');
 
 ```php
 $url = plugin_assets('example-plugin', 'assets/js/example1.js');
-```
-
-## `webpack_assets`
-
-返回由 webpack 处理的前端资源文件的 URL。当 `APP_ENV` 为 `development` 时，资源会从 `webpack-serve` 的服务器中获取，其它情况则从 `public` 目录中获取。通常插件不应该用到这个函数，如果插件要获取自己的资源文件，请使用 `plugin_assets` 函数。
-
-```php
-$url = webpack_assets('index.js');
 ```

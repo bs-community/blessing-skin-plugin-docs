@@ -57,15 +57,17 @@ Font Awesome 已经升级到 v5，具体变化请阅读 Font Awesome 的文档�
 
 `trans` 函数用于前端多语言，它仍然可用。
 
-#### SweetAlert2 库的 `swal` 函数和 toastr 库的 `toastr` 函数以及 jQuery 的 $
+#### jQuery
 
-这三个都全局可用。
+jQuery 全局可用。
 
 #### `showModal` 和 `showMsg` 函数
 
 `showModal` 已被移至 `blessing.notify` 对象中，功能保持不变。
 
 `showMsg` 则已被移除。
+
+`swal` 和 `toastr` 已被移除。尽管在 v3 的时候可用，但我们从未把这当作特性。
 
 #### `fetch` 函数
 
