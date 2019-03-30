@@ -196,7 +196,7 @@ Blessing Skin 内部基于 Laravel 的模型多对多关联来实现衣柜功能
 
 #### 更改
 
-`EncryptUserPassword` 事件中的 `rawPasswd` 属性现已更名为 `rawPassword`，类型保持不变。
+`EncryptUserPassword` 事件中的 `rawPasswd` 属性现已更名为 `raw`，类型保持不变。
 
 ## 从 3.4.0 迁移到 3.5.0
 
