@@ -198,6 +198,16 @@ Blessing Skin 内部基于 Laravel 的模型多对多关联来实现衣柜功能
 
 `EncryptUserPassword` 事件中的 `rawPasswd` 属性现已更名为 `raw`，类型保持不变。
 
+### 表单验证规则（影响度：低）
+
+在 3.5.0 中被废弃的表单验证规则现已被移除，它们是：
+
+- `playername`
+
+- `nickname`
+
+- `pname_chinese`
+
 ## 从 3.4.0 迁移到 3.5.0
 
 ### Composer
