@@ -8,22 +8,6 @@ Blessing Skin 中包含了一些的全局可用「辅助」PHP 函数，Blessing
 
 [[toc]]
 
-## `bs_custom_copyright`
-
-返回页面底部的自定义版权信息。
-
-```php
-$copyright = bs_custom_copyright();
-```
-
-## `bs_favicon`
-
-返回能够让浏览器显示 favicon 的 HTML 代码。
-
-```php
-$html = bs_favicon();
-```
-
 ## `bs_footer_extra`
 
 渲染页面底部除 Blessing Skin 以外的内容。
@@ -64,16 +48,6 @@ $menu = bs_menu('admin'); // 管理面板的菜单
 
 ```php
 $html = bs_menu_render(bs_menu('user'));
-```
-
-## `bs_role`
-
-返回用户的权限级别名称，如「封禁」、「正常」、「管理员」等。
-
-```php
-$role = bs_role();  // 默认为当前用户
-
-$role = bs_role(User::find(1));  // 也可以手动传入一个用户模型实例
 ```
 
 ## `format_http_date`
@@ -172,21 +146,11 @@ $isSecure = is_request_secure();
 ```php
 json(['a' => 1, 'b' => 2]);  // {"a":1,"b":2}
 
-json('Hello.', 0, ['a' => 1]);  // {"errno":0,"msg":"Hello.","a":1}
+json('Hello.', 0, ['a' => 1]);  // {"code":0,"message":"Hello.","data":{"a":1}}
 
-json('Success', 0);  // {"errno":0,"msg":"Success"}
+json('Success', 0);  // {"code":0,"message":"Success"}
 
-json('Failed');  // {"errno":1,"msg":"Failed"}
-```
-
-## `menv`
-
-获取环境变量，您可以指定默认值。
-
-```php
-$host = menv('DB_HOST');
-
-$value = menv('NOPE', 'empty');  // `empty` 为默认值
+json('Failed');  // {"code":1,"message":"Failed"}
 ```
 
 ## `nl2p`
