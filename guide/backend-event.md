@@ -252,6 +252,20 @@ $events->subscribe(Example\RenderSubscriber::class);
 
 含义：角色实例
 
+### PlayerRetrieved
+
+::: tip 触发时机
+
+从数据库中读取角色信息。
+
+:::
+
+#### player
+
+类型：`App\Models\Player`
+
+含义：角色实例
+
 ### PlayerWasAdded
 
 ::: tip 触发时机
