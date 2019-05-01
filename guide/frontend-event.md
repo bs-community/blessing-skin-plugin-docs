@@ -131,3 +131,13 @@ blessing.event.emit('eventA', data)  // 假设 `data` 变量已定义
 :::
 
 此事件传递给回调参数的类型是 [`Element`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element)，代表 [`skinview3d`](https://github.com/bs-community/skinview3d) 所在的容器。
+
+### i18nLoaded
+
+::: tip 触发时机
+
+前端的国际化文本加载完成后。
+
+:::
+
+此事件传递给回调函数的第一个参数等同于 `blessing.i18n`。您可以随意修改里面的内容，页面上的文本会相应地变更。
