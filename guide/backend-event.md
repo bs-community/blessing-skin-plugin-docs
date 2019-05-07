@@ -416,6 +416,20 @@ $event->addContent('<script></script>');
 $event->addContent('<style></style>');
 ```
 
+### TextureDeleting
+
+::: tip 触发时机
+
+材质将被删除。
+
+:::
+
+#### contents
+
+类型：`App\Models\Texture`
+
+含义：正在被删除的材质。
+
 ### UserAuthenticated
 
 ::: tip 触发时机
