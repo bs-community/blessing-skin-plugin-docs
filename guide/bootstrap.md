@@ -33,7 +33,8 @@ Blessing Skin Server 提供了一些钩子供插件使用，例如向页面添�
 Hook::addMenuItem('user', 0, [
     'title' => 'Blessing\ExamplePlugin::general.menu',
     'link'  => '/my-page',
-    'icon'  => 'fa-cog'
+    'icon'  => 'fa-cog',
+    'new-tab' => true, // 表示是否在浏览器新标签页中打开链接，默认为 false
 ]);
 ```
 
@@ -41,7 +42,7 @@ Hook::addMenuItem('user', 0, [
 
 第二个参数用于定义菜单项的位置，从 0 开始计算，如果这个数值过大，那么菜单项将无法显示。
 
-第三个参数传递的是一个数组。数组包含三个元素，分别是 `title`、`link` 和 `icon`。
+第三个参数传递的是一个数组。数组包含 `title`、`link`、 `icon` 和 `new-tab`。
 
 - `title`
 
