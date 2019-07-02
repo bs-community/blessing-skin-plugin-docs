@@ -1,7 +1,6 @@
 module.exports = {
   title: 'Blessing Skin 插件开发',
   description: '扩展您的 Blessing Skin',
-  base: '/blessing-skin-plugin-docs/',
   themeConfig: {
     nav: [
       { text: '教程', link: '/guide/' },
