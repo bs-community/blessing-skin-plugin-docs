@@ -15,7 +15,7 @@ features:
 
 ## 想要增强您的 Blessing Skin 或为现有插件贡献？
 
-马上开始 [阅读文档](https://bs-community.github.io/blessing-skin-plugin-docs/)，学习开发 Blessing Skin 插件。
+马上开始 [阅读文档](https://bs-plugin.netlify.com/)，学习开发 Blessing Skin 插件。
 
 ## 支持我
 
