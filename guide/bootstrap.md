@@ -96,7 +96,7 @@ Hook::registerPluginTransScripts('example-plugin');
 
 注意，语言文件的路径必须是插件目录下的 `lang/{Language}/locale.js`，其中 `{Language}` 为 `en` 或 `zh_CN`。
 
-### 显示用户 badge
+### 显示用户 badge  <Badge text="4.3.0+"/>
 
 调用 `addUserBadge` 方法会向用户中心和管理面板左上角的用户信息面板添加一个 badge。用法如下：
 
