@@ -3,18 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build",
-    "test": "markdownlint guide"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "node scripts/eof.js"
-    }
+    "build": "vuepress build"
   },
   "devDependencies": {
-    "fs-extra": "^7.0.0",
-    "husky": "^1.0.0-rc.13",
-    "markdownlint-cli": "^0.13.0",
-    "vuepress": "^0.14.3"
+    "vuepress": "^1.0.2"
   }
 }
