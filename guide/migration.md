@@ -16,6 +16,8 @@ title: 迁移指南
 
 - 增加新的 [`sendNotification`](https://bs-plugin.netlify.com/guide/bootstrap.html#%E5%8F%91%E9%80%81%E9%80%9A%E7%9F%A5) 方法。
 
+- 增加新的 [`pushMiddleware`](https://bs-plugin.netlify.com/guide/bootstrap.html#%E6%B3%A8%E5%86%8C%E4%B8%AD%E9%97%B4%E4%BB%B6) 方法。
+
 ## 从 4.1.0 迁移到 4.2.0
 
 ### 事件（后端）
