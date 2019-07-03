@@ -115,3 +115,21 @@ Hook::sendNotification($users, $title, $content);
 ```
 
 其中 `$users` 为要接收此通知的用户，这个参数必须是数组，如果要针对单个用户进行发送，可以使用像 `[$user]` 这样的方法进行发送；第二个参数是通知的标题，该参数是必须的；第三个参数是通知内容，可选。
+
+### 注册中间件 <Badge text="4.3.0+"/>
+
+使用此 API 可以动态地向 Blessing Skin 现有的路由增加一个中间件。注意，对于插件自己注册的路由，不需要使用此 API，只需要在注册的路由中调用 `middleware` 方法即可。
+
+```php
+class Middleware
+{
+    public function handle($request, $next)
+    {
+        return $next($request);
+    }
+}
+
+Hook::pushMiddleware(Middleware::class);
+```
+
+要注意的是，向此 API 传入的必须是中间件本身，而不是中间件这个类的一个实例。
