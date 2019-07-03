@@ -14,6 +14,8 @@ title: 迁移指南
 
 - 增加新的 [`addUserBadge`](https://bs-plugin.netlify.com/guide/bootstrap.html#%E6%98%BE%E7%A4%BA%E7%94%A8%E6%88%B7-badge) 方法。
 
+- 增加新的 [`sendNotification`](https://bs-plugin.netlify.com/guide/bootstrap.html#%E5%8F%91%E9%80%81%E9%80%9A%E7%9F%A5) 方法。
+
 ## 从 4.1.0 迁移到 4.2.0
 
 ### 事件（后端）
