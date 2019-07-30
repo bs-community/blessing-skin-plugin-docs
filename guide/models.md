@@ -154,17 +154,6 @@ $user->save();
 
 返回值：类型为 `bool`，表示密码是否正确。
 
-### `getEncryptedPwdFromEvent`
-
-触发 `EncryptUserPassword` 事件，然后获取触发事件后由监听器返回的密码。通常插件不会用到这个方法。
-
-参数：
-
-- `password` - 原始密码
-- `user` - 类型为 `App\Models\User`，为该用户的模型实例
-
-返回值：可能为一个 Laravel `Response`，也可能为 `null`
-
 ### `changePassword`
 
 更改用户的密码。通常插件不会用到这个方法。
