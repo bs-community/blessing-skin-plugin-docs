@@ -6,6 +6,18 @@ title: 迁移指南
 
 本节内容将指引您如何将插件从旧版本的 Blessing Skin 迁移到新的 Blessing Skin 中。
 
+## 从 4.3.x 或 4.4.0 迁移到 5.0.0
+
+### `User` 模型
+
+该模型中的以下实例方法均已被移除：
+
+- `setScore` （请手动更新用户的积分并调用 `save` 方法）
+- `getStorageUsed`
+- `sign`
+- `getSignRemainingTime`
+- `canSign`
+
 ## 从 4.2.0 迁移到 4.3.0
 
 ### 钩子
