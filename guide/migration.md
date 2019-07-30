@@ -18,6 +18,8 @@ title: 迁移指南
 - `getSignRemainingTime`
 - `canSign`
 
+原静态方法 `getEncryptedPwdFromEvent` 现改为实例方法，同时方法签名改为只有一个参数，即 `$raw`。
+
 ## 从 4.2.0 迁移到 4.3.0
 
 ### 钩子
