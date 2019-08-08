@@ -20,6 +20,30 @@ title: 迁移指南
 
 原静态方法 `getEncryptedPwdFromEvent` 现改为实例方法，同时方法签名改为只有一个参数，即 `$raw`。
 
+### 类导入
+
+以下用法已被移除。按理来说影响应该不大，因为文档从来没提到过此类用法。
+
+```php
+use Arr;
+
+use Str;
+
+use Option;
+
+use Minecraft;
+```
+
+其中 `use Option` 请改为使用 `option` 辅助函数，其它则改为以下用法：
+
+```php
+use Illuminate\Support\Arr;
+
+use Illuminate\Support\Str;
+
+use App\Services\Minecraft;
+```
+
 ## 从 4.2.0 迁移到 4.3.0
 
 ### 钩子
