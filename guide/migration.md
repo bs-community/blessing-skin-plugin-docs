@@ -29,12 +29,10 @@ use Arr;
 
 use Str;
 
-use Option;
-
 use Minecraft;
 ```
 
-其中 `use Option` 请改为使用 `option` 辅助函数，其它则改为以下用法：
+改为以下用法：
 
 ```php
 use Illuminate\Support\Arr;
