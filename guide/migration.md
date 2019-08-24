@@ -10,7 +10,7 @@ title: 迁移指南
 
 ### 版本更新
 
-PHP 版本要求已提升到 7.2.12。
+PHP 版本要求已提升到 7.2.0。
 
 ### `User` 模型
 
@@ -45,6 +45,31 @@ use Illuminate\Support\Str;
 
 use App\Services\Minecraft;
 ```
+
+### `bootstrap.php`
+
+您现在可以直接在 `bootstrap.php` 定义的闭包中通过 `$plugin` 参数获取当前插件的实例：
+
+```php
+return function ($plugin) {
+    // $plugin 就是这个插件的实例。
+
+    // 可以像下面这样获取前端资源 URL：
+    $plugin->assets('something.css');
+};
+```
+
+### 钩子
+
+现在 `Hook::sendNotification` 函数的第一个参数 `$users` 可接受单个用户，不再限制为数组。
+
+### 声明冲突
+
+这是一个新增的特性，详见 [此处](conflicts.md)。
+
+### 自动加载服务提供者
+
+这是一个新增的特性，详见 [此处](providers.md)。
 
 ## 从 4.2.0 迁移到 4.3.0
 

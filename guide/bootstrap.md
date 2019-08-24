@@ -19,6 +19,17 @@ title: 插件的开始
 - `Illuminate\Contracts\Events\Dispatcher` 事件监听需要此依赖。详情请阅读 [事件](./backend-event.md) 一节。
 - `Illuminate\Http\Request` 可用于处理用户的请求，如请求的 HTTP 动词判断、获取请求的路径、获取请求体中包含的数据、获取 Cookies 等，详细请阅读 [Laravel 文档](https://laravel-china.org/docs/laravel/5.6/requests/1367)。
 
+此外，从 5.0.0 起，您可以通过 `$plugin` 参数获取当前插件的实例：
+
+```php
+return function ($plugin) {
+    // $plugin 就是这个插件的实例。
+
+    // 可以像下面这样获取前端资源 URL：
+    $plugin->assets('something.css');
+};
+```
+
 ## 钩子
 
 Blessing Skin Server 提供了一些钩子供插件使用，例如向页面添加样式文件、添加脚本文件、添加菜单项、添加路由等。
@@ -114,7 +125,7 @@ Hook::addUserBadge('text', 'green');
 Hook::sendNotification($users, $title, $content);
 ```
 
-其中 `$users` 为要接收此通知的用户，这个参数必须是数组，如果要针对单个用户进行发送，可以使用像 `[$user]` 这样的方法进行发送；第二个参数是通知的标题，该参数是必须的；第三个参数是通知内容，可选。
+其中 `$users` 为要接收此通知的用户。从 5.0.0 起，可以传入单个用户实例。
 
 ### 注册中间件 <Badge text="4.3.0+"/>
 
