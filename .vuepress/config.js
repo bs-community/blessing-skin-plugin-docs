@@ -33,7 +33,9 @@ module.exports = {
         'frontend-event',
         'fetch',
         'dependency',
+        'conflicts',
         'composer',
+        'providers',
         'migration',
       ]
     },
