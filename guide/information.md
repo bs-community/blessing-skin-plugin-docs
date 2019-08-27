@@ -1,8 +1,4 @@
----
-title: 插件信息定义
----
-
-# {{ $page.title }}
+# 插件信息定义
 
 ## 前言
 
@@ -19,6 +15,7 @@ title: 插件信息定义
 - [`config`](#config)
 - [`url`](#url)
 - [`require`](#require)
+- [`enchants`](#enchants)
 
 ## 详细介绍
 
@@ -56,7 +53,7 @@ Blessing Skin Server 并没有对此字段作出内容限定，但我们建议�
 
 ### `config`
 
-这里定义 “插件配置” 页面是哪个视图文件，如果您的插件没有或不需要 “插件配置” 页，则可省略此字段。
+这里定义「插件配置」页面是哪个视图文件，如果您的插件没有或不需要「插件配置」页，则可省略此字段。如果您的插件配置页面位于 `views/config.blade.php`，则也可以省略此字段，Blessing Skin 能自动识别。
 
 ### `url`
 
@@ -65,3 +62,35 @@ Blessing Skin Server 并没有对此字段作出内容限定，但我们建议�
 ### `require`
 
 这个字段用于声明插件的依赖，更多介绍请移步 [声明依赖](dependency.md)
+
+### `enchants` <Badge text="5.0.0+"/>
+
+`enchants` 字段定义了影响插件行为的信息。这个字段还细分有不同的字段。
+
+#### `providers`
+
+该字段的类型为字符串数组。利用字段可以定义要加载的 [服务提供者](https://learnku.com/docs/laravel/5.8/providers)。
+
+在指定要加载的服务提供者时，可省略命名空间，因为所有的服务提供者都 **必须** 从插件指定的命名空间中加载。此外，还可以省略类名后面的 `ServiceProvider`。
+
+例如：
+
+```json
+{
+  "namespace": "Example",
+  "enchants": {
+    "providers": [
+      "Example\\MyServiceProvider",
+      "Our"
+    ]
+  }
+}
+```
+
+上面的例子定义了两个服务提供者。第一个为全写的形式；对于第二个，Blessing Skin 会根据 `namespace` 自动补全为 `Example\\OurServiceProvider`。
+
+更多内容请阅读本文档关于 [服务提供者](./providers.md) 部分。
+
+#### `conflicts`
+
+该字段的结构与定义插件依赖类似。具体作用请阅读 [声明插件冲突](./conflicts.md)。
