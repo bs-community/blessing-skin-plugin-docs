@@ -1,8 +1,4 @@
----
-title: 迁移指南
----
-
-# {{ $page.title }}
+# 迁移指南
 
 本节内容将指引您如何将插件从旧版本的 Blessing Skin 迁移到新的 Blessing Skin 中。
 
@@ -58,6 +54,11 @@ return function ($plugin) {
     $plugin->assets('something.css');
 };
 ```
+
+另外，Blessing Skin 现在会捕捉 `bootstrap.php` 中发生的异常（不包括在其中定义的路由或监听的事件内发生异常）。
+如果在执行 `bootstrap.php` 中的代码时发生异常，Blessing Skin 会在管理员访问站点时发出一条提示。
+
+如果不希望异常被捕捉，可以在「服务提供者」中执行代码，服务提供者中出现的异常不会捕捉。
 
 ### 钩子
 
