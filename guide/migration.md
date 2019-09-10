@@ -76,6 +76,10 @@ return function ($plugin) {
 
 `Response` 上的 `png` 宏和 `jsonProfile` 宏均已被移除。
 
+### 辅助函数
+
+`format_http_date` 已被移除。
+
 ## 从 4.2.0 迁移到 4.3.0
 
 ### 钩子
