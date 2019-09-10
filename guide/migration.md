@@ -72,6 +72,10 @@ return function ($plugin) {
 
 这是一个新增的特性，详见 [此处](providers.md)。
 
+### `Response` 宏
+
+`Response` 上的 `png` 宏和 `jsonProfile` 宏均已被移除。
+
 ## 从 4.2.0 迁移到 4.3.0
 
 ### 钩子
