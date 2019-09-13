@@ -4,56 +4,12 @@ Blessing Skin 中包含了一些的全局可用「辅助」PHP 函数，Blessing
 
 [[toc]]
 
-## `bs_footer_extra`
-
-渲染页面底部除 Blessing Skin 以外的内容。
-
-```php
-$html = bs_footer_extra();
-```
-
-## `bs_header_extra`
-
-渲染页面顶部除 Blessing Skin 以外的内容。
-
-```php
-$html = bs_header_extra();
-```
-
-## `bs_menu`
-
-生成页面侧栏菜单的信息。
-
-```php
-$menu = bs_menu('user');  // 普通用户页面的菜单
-
-$menu = bs_menu('admin'); // 管理面板的菜单
-```
-
-## `bs_menu_render`
-
-根据菜单信息生成相应的 HTML。
-
-```php
-$html = bs_menu_render(bs_menu('user'));
-```
-
 ## `get_client_ip`
 
 返回客户端的 IP 地址。
 
 ```php
 $ip = get_client_ip();
-```
-
-## `get_db_config`
-
-返回数据勯连接信息，可指定返回哪个连接。
-
-```php
-$info = get_db_config();   // 返回默认的数据库连接信息
-
-$info = get_db_config('sqlite');  // 返回 SQLite 连接的信息
 ```
 
 ## `get_string_replaced`
@@ -67,32 +23,6 @@ $replaced = get_string_replaced('Writing docs.', [
 ]);
 
 // Authoring docs!
-```
-
-## `humanize_db_type`
-
-::: tip
-
-此函数在 Blessing Skin v3 为 `get_db_type`，在 Blessing Skin v4 更名为 `humanize_db_type`，功能保持不变。
-
-:::
-
-输出可读的数据库类型名称。
-
-```php
-humanize_db_type('mysql');  // 返回 'MySQL'
-
-humanize_db_type('sqlite');  // 返回 'SQLite'
-
-humanize_db_type('pgsql');  // 返回 'PostgreSQL'
-```
-
-## `is_request_secure`
-
-判断当前请求是否采用 HTTPS。
-
-```php
-$isSecure = is_request_secure();
 ```
 
 ## `json`
