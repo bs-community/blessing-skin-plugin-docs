@@ -1,8 +1,4 @@
----
-title: 辅助函数
----
-
-# {{ $page.title }}
+# 辅助函数
 
 Blessing Skin 中包含了一些的全局可用「辅助」PHP 函数，Blessing Skin 本身也使用了这些功能；如果您觉得方便，您可以在您的插件中自由地使用它们。
 
@@ -14,14 +10,6 @@ Blessing Skin 中包含了一些的全局可用「辅助」PHP 函数，Blessing
 
 ```php
 $html = bs_footer_extra();
-```
-
-## `bs_hash_file`
-
-计算由用户上传的文件的 hash 值。
-
-```php
-$hash = bs_hash_file(request()->file('file'));
 ```
 
 ## `bs_header_extra`
@@ -50,44 +38,12 @@ $menu = bs_menu('admin'); // 管理面板的菜单
 $html = bs_menu_render(bs_menu('user'));
 ```
 
-## `format_http_date`
-
-根据 UNIX 时间戳生成可在 HTTP 头部中表示的时间字符串。
-
-```php
-$time = format_http_date(time());
-```
-
-## `get_base_url`
-
-返回整个 Blessing Skin 的根 URL，支持 Blessing Skin 安装在子目录。
-
-```php
-$url = get_base_url();
-```
-
 ## `get_client_ip`
 
 返回客户端的 IP 地址。
 
 ```php
 $ip = get_client_ip();
-```
-
-## `get_current_url`
-
-返回当前请求的 URL。
-
-```php
-$url = get_current_url();
-```
-
-## `get_datetime_string`
-
-根据 UNIX 时间戳返回「Y-m-d H:i:s」格式的时间字符串。
-
-```php
-$time = get_datetime_string(time());
 ```
 
 ## `get_db_config`
