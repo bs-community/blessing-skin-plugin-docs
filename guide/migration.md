@@ -64,6 +64,8 @@ return function ($plugin) {
 
 现在 `Hook::sendNotification` 函数的第一个参数 `$users` 可接受单个用户，不再限制为数组。
 
+由于 Laravel 5.4 的一项更新，`addScriptFileToPage` 和 `addStyleFileToPage` 不再支持指定优先级（即第三个参数）。
+
 ### 声明冲突
 
 这是一个新增的特性，详见 [此处](conflicts.md)。
