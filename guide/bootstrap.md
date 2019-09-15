@@ -92,10 +92,10 @@ Hook::addStyleFileToPage(plugin('example-plugin')->assets('assets/css/example.cs
 同样，您可能想向页面添加自定义的 JavaScript 文件，则可以通过 `addScriptFileToPage` 来添加，如：
 
 ```php
-Hook::addScriptFileToPage(plugin('example-plugin')->assets('assets/js/example.js', [*], 999));
+Hook::addScriptFileToPage(plugin('example-plugin')->assets('assets/js/example.js'), [*]);
 ```
 
-这里要说明的是，通过 `plugin` 的 `assets` 方法同样可以获取到静态资源，后面接两个可选参数。第一个可选参数表示仅当请求的 URI 与参数匹配时才加载该资源文件，可以使用通配符；第二个可选参数是优先级，越高越先加载。
+这里要说明的是，通过 `plugin` 的 `assets` 方法同样可以获取到静态资源。第一个参数是要加载的 URL；第二个参数可选参数表示仅当请求的 URI 与参数匹配时才加载该资源文件，可以使用通配符，这个参数是可选的。
 
 ### 注册 JavaScript 的语言文件
 
