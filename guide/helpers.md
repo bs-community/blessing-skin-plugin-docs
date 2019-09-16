@@ -39,14 +39,6 @@ json('Success', 0);  // {"code":0,"message":"Success"}
 json('Failed');  // {"code":1,"message":"Failed"}
 ```
 
-## `nl2p`
-
-将多行文本转换成多个 HTML 段落（即 `p` 元素）。
-
-```php
-$html = nl2p('a\nb');  // <p>a</p><p>b</p>
-```
-
 ## `option`
 
 返回或设置存储在数据库中的配置项。
