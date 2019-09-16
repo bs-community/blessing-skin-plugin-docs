@@ -80,7 +80,10 @@ return function ($plugin) {
 
 ### 辅助函数
 
-`format_http_date` 已被移除。
+以下辅助函数已被移除：
+
+- `format_http_date` 替代方案：调用 `Carbon` 实例上的 `toRfc7231String` 方法
+- `nl2p` 替代方案：无，请手动实现
 
 ## 从 4.2.0 迁移到 4.3.0
 
