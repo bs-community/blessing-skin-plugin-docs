@@ -8,6 +8,8 @@
 
 PHP 版本要求已提升到 7.2.0，同时 Laravel 已升级到 6.x。
 
+另外 AdminLTE 升级到 v3，而 AdminLTE 底层所使用的 Bootstrap 也因此升级到 v4。
+
 ### `User` 模型
 
 该模型中的以下实例方法均已被移除：
@@ -84,6 +86,18 @@ return function ($plugin) {
 
 - `format_http_date` 替代方案：调用 `Carbon` 实例上的 `toRfc7231String` 方法
 - `nl2p` 替代方案：无，请手动实现
+
+### 配置页面
+
+现在可以通过在 `package.json` 中 `enchants` 字段下的 `config` 字段来指定配置页面。它比根 `config` 具有更高的优先级。具体可阅读 [插件信息定义](information.md) 中的相关介绍。
+
+### `blessing` 全局变量
+
+`notify.showModal` 的用法与以前完全不同。具体可参考 [这里](https://github.com/bs-community/blessing-skin-server/blob/dev/resources/assets/src/scripts/modal.ts)。
+
+### 表单
+
+`OptionForm` 上新增一个新的实例方法 `addAlert`。它的用法与 `addMessage` 类似。
 
 ## 从 4.2.0 迁移到 4.3.0
 
