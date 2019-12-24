@@ -4,27 +4,6 @@ Blessing Skin 中包含了一些的全局可用「辅助」PHP 函数，Blessing
 
 [[toc]]
 
-## `get_client_ip`
-
-返回客户端的 IP 地址。
-
-```php
-$ip = get_client_ip();
-```
-
-## `get_string_replaced`
-
-进行字符串替换。
-
-```php
-$replaced = get_string_replaced('Writing docs.', [
-    'Writing' => 'Authoring',
-    '.' => '!'
-]);
-
-// Authoring docs!
-```
-
 ## `json`
 
 返回一个 JSON 响应。注意，您需要在控制器中手动返回此函数的返回值，也就是需要在控制器方法中进行 `return json();`。
