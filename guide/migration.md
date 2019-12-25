@@ -101,7 +101,11 @@ return function ($plugin) {
 
 `OptionForm` 上新增一个新的实例方法 `addAlert`。它的用法与 `addMessage` 类似。
 
-## 从 4.2.0 迁移到 4.3.0
+### 其它
+
+Parsedown 已从服务容器中被移除。也就是说，`app('parsedown')` 不再可用，需要您手动构造 `Parsedown` 这个类。
+
+##  从 4.2.0 迁移到 4.3.0
 
 ### 钩子
 
