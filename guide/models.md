@@ -206,48 +206,6 @@ $user->save();
 
 返回值：类型为 `bool`，表明用户是否被封禁。
 
-### `getTexture`
-
-返回该角色上的材质的 hash。
-
-参数：
-
-- `type` - 材质的类型，可以是 `skin`、`steve`、`alex` 和 `cape`。当这个参数的值为 `skin` 时，会先获取角色上的偏好模型，然后根据这个模型去返回材质，其它情况都是直接按照参数中指定的类型去返回材质。
-
-返回值：类型为 `string`，为材质的 `hash` 值。
-
-```php
-$player->getTexture('steve');  // 返回 Steve 皮肤模型对应的材质 hash
-```
-
-### `getJsonProfile`
-
-获取角色的 JSON Profile 信息。通常插件不会用到这个方法。
-
-参数：
-
-- `api_type` - 类型为 `int`，代表 API 类型。当这个参数的值为 `0` 时表示 CustomSkinLoader API，为 `1` 时表示 Universal Skin Mod API。
-
-返回值：类型为 `string`，是一个 JSON 字符串。
-
-### `generateJsonProfile`
-
-生成角色的 JSON Profile 字符串。
-
-参数：
-
-- `api_type` - 类型为 `int`，代表 API 类型。当这个参数的值为 `0` 时表示 CustomSkinLoader API，为 `1` 时表示 Universal Skin Mod API。
-
-返回值：类型为 `string`，是一个 JSON 字符串。
-
-### `updateLastModified`
-
-更新 `last_modified` 字段的值，即更新「上次修改时间」。调用此方法会触发 `PlayerProfileUpdated` 事件。
-
-参数：无
-
-返回值：无
-
 ## `Texture` 模型
 
 `Texture`  模型代表的是材质，模型实例上记录的是每个材质的数据。`Texture` 模型在数据表中的主键为 `tid`，是个自增的整数字段，因此您不能去修改一个材质的 `tid`，因为它是唯一标识。

@@ -26,7 +26,9 @@ PHP 版本要求已提升到 7.2.0，同时 Laravel 已升级到 6.x。
 
 在 BS v4 中被废弃的 `player_name` 属性现已被移除。
 
-### 类导入
+`Player` 模型实例上的 `getJsonProfile`、`generateJsonProfile`、`getTexture` 已被移除。
+
+###  类导入
 
 以下用法已被移除。按理来说影响应该不大，因为文档从来没提到过此类用法。
 
