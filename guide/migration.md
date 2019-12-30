@@ -101,6 +101,10 @@ return function ($plugin) {
 
 `notify.showModal` 的用法与以前完全不同。具体可参考 [这里](https://github.com/bs-community/blessing-skin-server/blob/dev/resources/assets/src/scripts/modal.ts)。
 
+### 事件
+
+- `GetPlayerJson` 事件已被移除
+
 ### 表单
 
 `OptionForm` 上新增一个新的实例方法 `addAlert`。它的用法与 `addMessage` 类似。
