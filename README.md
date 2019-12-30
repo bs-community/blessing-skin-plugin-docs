@@ -6,7 +6,7 @@ actionLink: /guide/scaffold
 footer: CC-BY-SA 4.0 | Copyright © 2017-present The Blessing Skin Community
 features:
 - title: 快速开始
-  details: 通过脚手架，结合本文档，您就能快速进行插件开发。
+  details: 通过模板，结合本文档，您就能快速进行插件开发。
 - title: 质量保证
   details: 文档由 Blessing Skin 的活跃贡献者编写和维护。当 Blessing Skin 的更新影响插件时，本文档也会相应更新。
 - title: 简洁而详尽
