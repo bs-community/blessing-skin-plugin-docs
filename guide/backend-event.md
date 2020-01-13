@@ -86,20 +86,6 @@ $events->subscribe(Example\RenderSubscriber::class);
 
 这里列出了 Blessing Skin 中所有定义了的事件。通常事件的实例上会带有一个或多个属性，代表事件触发时涉及的数据。因此，我们约定，我们使用三级标题表示事件的名称，用四级标题列出该事件实例上的属性。
 
-### CheckPlayerExists
-
-::: tip 触发时机
-
-即将检查角色是否存在时。此时角色未被检查。
-
-:::
-
-#### playerName
-
-类型：字符串
-
-含义：检查角色是否存在时，要检查的角色的名称。
-
 ### ConfigureAdminMenu
 
 ::: tip 触发时机
@@ -141,88 +127,6 @@ $events->subscribe(Example\RenderSubscriber::class);
 类型：数组
 
 含义：整个菜单列表
-
-### EncryptUserPassword
-
-::: tip 触发时机
-
-即将加密用户的密码时。「Authme 对接」等插件正是利用了这个事件。
-
-:::
-
-#### rawPassword
-
-> 注意：在 Blessing Skin v3.5.0 及更早版本，此属性的名称为 `rawPasswd`。
-
-类型：字符串
-
-含义：加密前的原始密码
-
-#### user
-
-类型：`App\Models\User`
-
-含义：该用户的实例
-
-### GetAvatarPreview
-
-::: tip 触发时机
-
-生成用户的头像预览之前。
-
-:::
-
-#### size
-
-类型：整数
-
-含义：头像的边长，单位是像素。
-
-#### texture
-
-类型：`App\Models\Texture`
-
-含义：材质的实例
-
-### GetPlayerJson
-
-::: tip 触发时机
-
-即将生成角色的 JSON 数据时。
-
-:::
-
-#### player
-
-类型：`App\Models\Player`
-
-含义：该角色的实例
-
-#### apiType
-
-类型：整数
-
-含义：请求的 API 类型。目前只有两种值，当请求 CustomSkinLoader API 时，该值为 `0`；当请求 Universal Skin Mod API 的时候，该值为 `1`。
-
-### GetSkinPreview
-
-::: tip 触发时机
-
-生成用户的皮肤预览之前。
-
-:::
-
-#### size
-
-类型：整数
-
-含义：预览图像的边长，单位是像素。
-
-#### texture
-
-类型：`App\Models\Texture`
-
-含义：材质的实例
 
 ### HashingFile
 
