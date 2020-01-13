@@ -26,7 +26,7 @@ PHP 版本要求已提升到 7.2.0，同时 Laravel 已升级到 6.x。
 
 在 BS v4 中被废弃的 `player_name` 属性现已被移除。
 
-`Player` 模型实例上的 `getJsonProfile`、`generateJsonProfile`、`getTexture` 已被移除。
+`Player` 模型实例上的 `getJsonProfile`、`generateJsonProfile`、`getTexture`、`isBanned` 已被移除。
 
 ###  类导入
 
@@ -36,8 +36,6 @@ PHP 版本要求已提升到 7.2.0，同时 Laravel 已升级到 6.x。
 use Arr;
 
 use Str;
-
-use Minecraft;
 ```
 
 改为以下用法：
@@ -46,8 +44,6 @@ use Minecraft;
 use Illuminate\Support\Arr;
 
 use Illuminate\Support\Str;
-
-use App\Services\Minecraft;
 ```
 
 ### `bootstrap.php`
@@ -95,6 +91,12 @@ return function ($plugin) {
 - ` get_client_ip` 替代方案：可以考虑这个库：https://github.com/Vectorface/whip
 - ` get_string_replaced` 替代方案：无
 
+### `App\Services\Minecraft` 类
+
+Blessing Skin v5 中更换了新的材质预览库，因此这个类已经被移除。虽然我们没有在文档中提及这个类，但如果您有使用，请注意迁移。
+
+目前我们使用新的预览库是：[blessing/texture-renderer](https://github.com/bs-community/texture-renderer)。
+
 ### 配置页面
 
 现在可以通过在 `package.json` 中 `enchants` 字段下的 `config` 字段来指定配置页面。它比根 `config` 具有更高的优先级。具体可阅读 [插件信息定义](information.md) 中的相关介绍。
@@ -106,6 +108,8 @@ return function ($plugin) {
 ### 事件
 
 - `GetPlayerJson` 事件已被移除
+- `GetAvatarPreview` 事件已被移除
+- `GetSkinPreview` 事件已被移除
 
 ### 表单
 
