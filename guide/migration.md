@@ -70,6 +70,11 @@ return function ($plugin) {
 
 由于 Laravel 5.4 的一项更新，`addScriptFileToPage` 和 `addStyleFileToPage` 不再支持指定优先级（即第三个参数）。
 
+### 中间件
+
+- `player` 中间件已被移除；
+- `admin` 和 `super-admin` 中间件已被移除，取而代之的是 `role` 中间件，这个中间件接受一个参数，详情可阅读本文档的 [路由](route.md) 部分。
+
 ### 声明冲突
 
 这是一个新增的特性，详见 [此处](conflicts.md)。
