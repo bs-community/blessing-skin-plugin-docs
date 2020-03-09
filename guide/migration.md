@@ -6,7 +6,7 @@
 
 ### 版本更新
 
-PHP 版本要求已提升到 7.2.0，同时 Laravel 已升级到 6.x。
+PHP 版本要求已提升到 7.2.5，同时 Laravel 已升级到 7.x。
 
 另外 AdminLTE 升级到 v3，而 AdminLTE 底层所使用的 Bootstrap 也因此升级到 v4。
 
