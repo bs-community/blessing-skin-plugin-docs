@@ -110,6 +110,8 @@ Blessing Skin v5 中更换了新的材质预览库，因此这个类已经被移
 
 `notify.showModal` 的用法与以前完全不同。具体可参考 [这里](https://github.com/bs-community/blessing-skin-server/blob/dev/resources/assets/src/scripts/modal.ts)。
 
+`fallback_locale` 属性已被移除。
+
 ### 事件
 
 - `GetPlayerJson` 事件已被移除

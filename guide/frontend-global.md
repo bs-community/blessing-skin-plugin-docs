@@ -38,6 +38,12 @@ title: 全局 blessing 变量
 
 类型：`string`
 
+::: warning
+
+从 v5.0.0 起，此属性已被移除。
+
+:::
+
 如果当前环境的语种不在 Blessing Skin 的支持范围内，这个值就是降级后的语种。
 
 ## `locale`
