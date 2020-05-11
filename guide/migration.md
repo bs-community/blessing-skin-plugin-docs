@@ -93,8 +93,8 @@ return function ($plugin) {
 
 - `format_http_date` 替代方案：调用 `Carbon` 实例上的 `toRfc7231String` 方法
 - `nl2p` 替代方案：无
-- ` get_client_ip` 替代方案：可以考虑这个库：https://github.com/Vectorface/whip
-- ` get_string_replaced` 替代方案：无
+- `get_client_ip` 替代方案：可以考虑这个库：[Vectorface/whip](https://github.com/Vectorface/whip)
+- `get_string_replaced` 替代方案：无
 
 ### `App\Services\Minecraft` 类
 
