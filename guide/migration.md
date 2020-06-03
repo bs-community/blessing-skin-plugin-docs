@@ -118,7 +118,7 @@ Blessing Skin v5 中更换了新的材质预览库，因此这个类已经被移
 - `GetAvatarPreview` 事件已被移除
 - `GetSkinPreview` 事件已被移除
 - `CheckPlayerExists` 事件已被移除
-- `EncryptUserPassword` 事件已被移除，请考虑使用 Filters API
+- `EncryptUserPassword` 事件已被移除，请考虑使用 Filters API（该 filter 的名称为 `user_password`）
 
 ### 表单
 
