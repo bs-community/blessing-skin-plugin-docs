@@ -128,20 +128,6 @@ $events->subscribe(Example\RenderSubscriber::class);
 
 含义：整个菜单列表
 
-### HashingFile
-
-::: tip 触发时机
-
-计算用户上传的材质的 hash 值之前。
-
-:::
-
-#### file
-
-类型：`Illuminate\Http\UploadedFile`
-
-含义：用户上传的文件的实例，该实例来自 Laravel，包含一系列可用的方法。
-
 ### PlayerProfileUpdated
 
 ::: tip 触发时机
