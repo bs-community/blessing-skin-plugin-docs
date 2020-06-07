@@ -120,6 +120,8 @@ Blessing Skin v5 中更换了新的材质预览库，因此这个类已经被移
 - `CheckPlayerExists` 事件已被移除
 - `EncryptUserPassword` 事件已被移除，请使用 filter `user_password`
 - `HashingFile` 事件已被移除，请使用 filter `file_hash`
+- 前端的 `skinViewerMounted` 事件已被移除
+- 前端的 `mounted` 事件现在不再传递任何参数
 
 ### 表单
 
