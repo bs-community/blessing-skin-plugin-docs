@@ -70,6 +70,8 @@ return function ($plugin) {
 
 由于 Laravel 5.4 的一项更新，`addScriptFileToPage` 和 `addStyleFileToPage` 不再支持指定优先级（即第三个参数）。
 
+`registerPluginTransScripts` 现在已经被移除，因为 v5 中使用了新的更方便的加载语言文件方法，而这个函数也就不再需要。
+
 ### 中间件
 
 - `player` 中间件已被移除；
