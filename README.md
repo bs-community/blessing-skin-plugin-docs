@@ -23,11 +23,6 @@ features:
 
 赞助时可以在留言中作个备注，以便写在下方的列表中表示感谢。
 
-### 赞助者
-
-- [printempw](https://github.com/printempw)
-- [Little_Qiu](https://github.com/tnqzh123)
-
 ### 赞助码
 
 <span style="display: flex; align-items: center;">
