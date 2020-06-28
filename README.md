@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: screenshot.png
+heroImage: home.webp
 actionText: 开始学习
 actionLink: /guide/scaffold
 footer: CC-BY-SA 4.0 | Copyright © 2017-present The Blessing Skin Community
