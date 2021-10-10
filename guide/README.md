@@ -1,9 +1,8 @@
 ---
-title: 介绍
 next: scaffold
 ---
 
-# {{ $page.title }}
+# 介绍
 
 ## 技能要求
 

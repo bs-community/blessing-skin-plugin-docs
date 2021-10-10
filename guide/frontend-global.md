@@ -1,8 +1,4 @@
----
-title: 全局 blessing 变量
----
-
-# {{ $page.title }}
+# 全局 blessing 变量
 
 [[toc]]
 

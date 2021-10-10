@@ -1,8 +1,4 @@
----
-title: 使用 Composer
----
-
-# {{ $page.title }}
+# 使用 Composer
 
 ::: warning
 

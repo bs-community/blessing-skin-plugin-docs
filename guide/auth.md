@@ -1,8 +1,4 @@
----
-title: 用户认证
----
-
-# {{ $page.title }}
+# 用户认证
 
 ::: warning
 
