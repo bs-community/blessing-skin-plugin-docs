@@ -13,11 +13,8 @@ evergreen = true
 text = '教程'
 link = '/guide/'
 [[themeConfig.nav]]
-text = '相关资源'
-items = [
-  { text = '官方示例插件', link = 'https://github.com/bs-community/blessing-skin-plugins/tree/master/example-plugin' },
-  { text = '脚手架', link = 'https://github.com/bs-community/generator-bs-plugin' },
-]
+text = '样板仓库'
+link = 'https://github.com/bs-community/plugin-template'
 
 [themeConfig.sidebar]
 '/guide/' = [
